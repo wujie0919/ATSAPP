@@ -1,0 +1,20 @@
+INDEX VERSION 1.126+E:\elc2as_workspace\.metadata\.plugins\org.eclipse.jdt.core
+1707594084.index
+2578938169.index
+2388978351.index
+2212429908.index
+1799080449.index
+3143419575.index
+3539146490.index
+2336486157.index
+1304626657.index
+889004287.index
+2051267633.index
+2079790143.index
+4003428211.index
+3983649345.index
+1531412002.index
+3413971354.index
+43173912.index
+398837002.index
+1289169697.index

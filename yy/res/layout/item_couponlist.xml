@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="5dip">
+
+
+    <LinearLayout
+        android:id="@+id/item_coupon_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_coupon_bcack_sel"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_coupon_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="租车券"
+                android:textColor="@drawable/item_coupon_color_sel_0"
+                android:textSize="@dimen/textsize_29px" />
+
+            <TextView
+                android:id="@+id/item_coupon_amout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15元"
+                android:textColor="@drawable/item_coupon_color_sel_0"
+                android:textSize="@dimen/textsize_40px" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="3.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/item_coupon_spit_sel"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="10dip">
+
+            <TextView
+                android:id="@+id/item_coupon_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="有效期至"
+                android:textColor="@drawable/item_coupon_color_sel_0"
+                android:textSize="@dimen/textsize_28px" />
+
+            <TextView
+                android:id="@+id/item_coupon_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginTop="5dip"
+                android:text="仅限分时订单一单使用"
+                android:textColor="@drawable/item_coupon_color_sel_1"
+                android:textSize="@dimen/textsize_24px" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

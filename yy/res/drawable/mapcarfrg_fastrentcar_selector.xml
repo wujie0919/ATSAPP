@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><!--快速租车+立即租车按钮-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/mapcarfrg_fastrentcar_pre" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/mapcarfrg_fastrentcar_nor"></item>
+</selector>

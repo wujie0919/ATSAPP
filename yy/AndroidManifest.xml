@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Android="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dzrcx.jiaan"
+    android:versionCode="62"
+    android:versionName="1.2.3">
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 应用权限相关配置 -->
+    <!-- 允许应用程序联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许写入SDcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 拨号权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 定位权限 -->
+    <!-- 百度地图权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 百度地图权限 end -->
+    <!-- 信鸽推送 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 信鸽推送 end -->
+
+    <!-- 科大讯飞 -->
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 科大讯飞end -->
+    <!-- 二维码扫描 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 二维码扫描 end -->
+
+    <!-- 应用权限相关配置 -->
+    <application
+        android:name="com.dzrcx.jiaan.YYApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:launchMode="singleInstance"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Black.NoTitleBar"
+        tools:replace="android:icon, android:theme">
+
+        <!-- 百度地图start -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="lwcZ8vodpp6c1Xu8LAaK3Bm8opZklGWp" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5941e72b7f2c7443c80008f4" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${CHANNEL_NAME}" />
+
+        <!-- 启动页 -->
+        <activity
+            android:name="com.dzrcx.jiaan.WelcomePageAty"
+            android:screenOrientation="portrait" />
+
+        <!-- 欢迎页 -->
+        <activity
+            android:name="com.dzrcx.jiaan.StartPageAty"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartPageTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="123456"
+                    android:scheme="yyzc" />
+            </intent-filter>
+        </activity>
+        <!--<activity-->
+        <!--android:name=".SearchCar.SearchCarActivity"-->
+        <!--android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.dzrcx.jiaan.Order.OrderAty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dzrcx.jiaan.Order.BNDemoGuideActivity"
+            android:screenOrientation="portrait" />
+        <!--我的行程-->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.RunDetailAty"
+            android:screenOrientation="portrait" />
+        <!--推送弹窗页面30分钟提示-->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.PushDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait" />
+        <!-- 须知Tab -->
+        <!--<activity-->
+        <!--android:name=".Notice.NoticeActivity"-->
+        <!--android:screenOrientation="portrait" />-->
+        <!-- 我Tab -->
+        <!--<activity-->
+        <!--android:name=".User.UserActivity"-->
+        <!--android:screenOrientation="portrait" />-->
+        <!-- 我开票历史 -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.InvoiceHistoryAty"
+            android:screenOrientation="portrait" />
+        <!-- 增值发票详情 这里详情起名写反了-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.InvoiceDetailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 开发票完成-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.InvoiceCompileteActivity"
+            android:screenOrientation="portrait" />
+        <!-- 普通发票详情 -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.ValueInvoiceDeailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 车辆详情 -->
+        <!--<activity-->
+        <!--android:name=".SearchCar.CarDetailAty"-->
+        <!--android:screenOrientation="portrait" />-->
+        <!-- 登录activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.LoginAty"
+            android:screenOrientation="portrait" />
+        <!-- 问题反馈activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.FeelBackAty"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+        <!-- 申请提现activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.DepositAct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 预授权授予activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.SearchCar.AuthorizeAty"
+            android:screenOrientation="portrait" />
+        <!-- 支付押金activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.SearchCar.WebAty"
+            android:screenOrientation="portrait" />
+        <!-- 支付租金activity -->
+       <!-- <activity
+            android:name=".Order.PayActivity"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.dzrcx.jiaan.Order.PayActivity"
+            android:screenOrientation="portrait" />
+        <!-- 订单详情activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.Order.OrderDetailAty"
+            android:screenOrientation="portrait" />
+
+        <!--评价我们-->
+        <activity
+            android:name="com.dzrcx.jiaan.Order.RatedUsAty"
+            android:screenOrientation="portrait" />
+
+        <!--日租创建订单-->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.DayShareActivity"
+            android:screenOrientation="portrait" />
+
+        <!--车辆检测-->
+        <activity
+            android:name="com.dzrcx.jiaan.Order.CheakCarAct"
+            android:screenOrientation="portrait" />
+
+        <!-- 身份认证界面activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.IdentificationAty"
+            android:screenOrientation="portrait" />
+
+        <!-- 身份认证界面activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.IdentificationReqAty"
+            android:screenOrientation="portrait" />
+        <!-- 账户迁移activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.TransferOneAty"
+            android:screenOrientation="portrait" />
+        <!-- 账户迁移activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.TransferTwoAty"
+            android:screenOrientation="portrait" />
+        <!-- 账户迁移activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.TransferThreeAty"
+            android:screenOrientation="portrait" />
+        <!-- 地图activity -->
+        <activity
+            android:name="com.dzrcx.jiaan.SearchCar.MapAty"
+            android:screenOrientation="portrait" />
+        <!-- mainactivity2 -->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.MainActivity2_1"
+            android:screenOrientation="portrait" />
+        <!-- 价格详情 -->
+        <!--<activity-->
+        <!--android:name=".Main.PriceDetailAty"-->
+        <!--android:screenOrientation="portrait" />-->
+        <!-- 订单列表 -->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.MyRunsListAty"
+            android:screenOrientation="portrait" />
+        <!-- 选择站点 -->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.ChooseStationAty"
+            android:screenOrientation="portrait" />
+        <!-- 创建订单 -->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.CreateOrderAty"
+            android:screenOrientation="portrait" />
+        <!-- 优惠券列表 -->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.CouponListAty"
+            android:screenOrientation="portrait" />
+        <!-- 关于我们 -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.AboutUsActy"
+            android:screenOrientation="portrait" />
+        <!-- 用户企业账户界面 -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.CompanyAccountAty"
+            android:screenOrientation="portrait" />
+        <!-- 开票工具 -->
+        <activity
+            android:name="com.dzrcx.jiaan.User.InvoiceIssueAty"
+            android:screenOrientation="portrait" />
+
+        <!-- 按行程开票列表-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.InvoiceRouteListAty"
+            android:screenOrientation="portrait" />
+
+        <!-- 按方式开票 按金额开票-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.InvoiceAty"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 充值记录-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.RechargeRecordAty"
+            android:screenOrientation="portrait" />
+
+        <!--个人中心-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.PersonnalCenterAty"
+            android:screenOrientation="portrait" />
+
+        <!--违章记录-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.BreakRulesAty"
+            android:screenOrientation="portrait" />
+
+        <!--我的账户界面-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.MyAccountAty"
+            android:screenOrientation="portrait" />
+
+        <!--消息中心界面-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.MessageCentreAty"
+            android:screenOrientation="portrait" />
+
+        <!--计价说明-->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.ValuationAty"
+            android:screenOrientation="portrait" />
+
+        <!--帮助 中心-->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.HelpCenterAty"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 二维码 -->
+        <activity
+            android:name="com.dzrcx.jiaan.zxing.android.CaptureActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.dzrcx.jiaan.speech.SpeechService">
+
+
+        </service>
+
+        <!--\违章详情-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.BreakRulesDetailAty"
+            android:screenOrientation="portrait" />
+        <!--\事故违章支付-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.BreakRulesPayAty"
+            android:screenOrientation="portrait" />
+        <!--\吐槽星辰-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.TalkComplainAty"
+            android:screenOrientation="portrait" />
+        <!--\吐槽星辰/选择服务类型-->
+        <activity
+            android:name="com.dzrcx.jiaan.User.ChooseSeciveTypeAty"
+            android:screenOrientation="portrait" />
+        <!--邀请有奖-->
+        <activity
+            android:name="com.dzrcx.jiaan.Main.RecommendAty"
+            android:screenOrientation="portrait" />
+        <!-- 微信支付 -->
+        <activity
+            android:name="com.dzrcx.jiaan.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/TimeTheme" />
+        <!-- 微信分享 -->
+        <activity
+            android:name="com.dzrcx.jiaan.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/TimeTheme" />
+
+        <receiver android:name="com.dzrcx.jiaan.wxapi.simcpux.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <!-- 微信支付 -->
+
+        <!-- 支付宝alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 支付宝alipay sdk end -->
+
+        <!-- 以下是信鸽推送的配置 -->
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver
+            android:name="com.tencent.android.tpush.XGPushReceiver"
+            android:process=":xg_service_v2">
+            <intent-filter android:priority="0x7fffffff">
+
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理 -->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action" -->
+                <action android:name="com.yy.xgpush" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushService"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v2" />
+
+        <!-- 【必须】 通知service，此选项有助于提高抵达率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.dzrcx.jiaan.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100258555" />
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="A3WR7V7X5J6A" />
+        <!-- 以上是信鸽推送的配置 -->
+
+
+        <!-- APP实现的Receiver，用于接收消息和结果反馈 -->
+        <!-- com.tencent.android.xgpushdemo.CustomPushReceiver需要改为自己的Receiver -->
+        <receiver android:name="com.dzrcx.jiaan.xgpush.XGPushMessageReceiver">
+            <intent-filter>
+
+                <!-- 接收消息透传 -->
+                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
+                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
+                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
+            </intent-filter>
+        </receiver>
+        <!--50米notification广播注册-->
+        <receiver android:name="com.dzrcx.jiaan.clicklistener.ClickBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.OrderAty_distance" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+</manifest>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+
+    <ImageView
+        android:layout_width="60dip"
+        android:layout_height="54dip"
+        android:layout_below="@+id/rl_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dip"
+        android:src="@drawable/icon_ident_req" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="32dip"
+        android:layout_marginRight="32dip"
+        android:layout_marginTop="120dp"
+        android:gravity="center"
+        android:lineSpacingExtra="5dip"
+        android:text="已完成提交，我们的工作人员将以最快的速度为您完成审核，请耐心等待，谢谢～"
+        android:textColor="@color/text_a6a6a6"
+        android:textSize="@dimen/textsize_28px" />
+
+
+    <TextView
+        android:id="@+id/identfy_req_user"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dip"
+        android:layout_marginLeft="28dip"
+        android:layout_marginRight="28dip"
+        android:background="@drawable/layout_bg_style1"
+        android:gravity="center"
+        android:text="紧急用车"
+        android:textColor="@color/text_a6a6a6"
+        android:textSize="@dimen/textsize_32px" />
+
+
+</RelativeLayout>

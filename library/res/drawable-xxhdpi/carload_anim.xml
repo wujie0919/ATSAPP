@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0001"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0002"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0003"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0004"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0005"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0006"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0007"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0008"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0009"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0010"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0011"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0012"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0013"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0014"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0015"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0016"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0017"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0018"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0019"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0020"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0021"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0022"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0023"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0024"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0025"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0026"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0027"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0028"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0029"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0030"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0031"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0032"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0033"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0034"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0035"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0036"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0037"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0038"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0039"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0040"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0041"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0042"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0043"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0044"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0045"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0046"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0047"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0048"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0049"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0050"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0051"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0052"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0053"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0054"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0055"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0056"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0057"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0058"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0059"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0060"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0061"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0062"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0063"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0064"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0065"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0066"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0067"
+        android:duration="80" />
+    <!--<item-->
+    <!--android:drawable="@drawable/car0068"-->
+    <!--android:duration="40" />-->
+    <!--<item-->2
+    <!--android:drawable="@drawable/car0069"-->
+    <!--android:duration="40" />-->
+    <!--<item-->
+    <!--android:drawable="@drawable/car0070"-->
+    <!--android:duration="40" />-->
+    <item
+        android:drawable="@drawable/car0071"
+        android:duration="80" />
+</animation-list>

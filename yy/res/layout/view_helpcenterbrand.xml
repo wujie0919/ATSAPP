@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_hight_0_5"
+            android:background="@color/line_eeeeee"></View>
+
+        <TextView
+            android:id="@+id/tv_brandname"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/line"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="车型指导"
+            android:textColor="@color/text_a6a6a6"
+            android:textSize="@dimen/textsize_26px" />
+    </RelativeLayout>
+</LinearLayout>

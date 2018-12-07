@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="22dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="扫一扫 邀请好友"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+
+            <TextView
+                android:id="@+id/tv_invitecode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text=""
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_38px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:gravity="center_horizontal"
+                android:text="专属邀请码 长按复制"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_22px" />
+
+            <TextView
+                android:id="@+id/tv_getmoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="邀请好友，双方各得30元现金优惠券"
+                android:textSize="@dimen/textsize_28px" />
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/see_detail"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_22px" />
+
+            <LinearLayout
+                android:id="@+id/ll_sharetocircle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/mapcarfrg_fastrentcar_selector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/invitation_circle"></View>
+
+                <TextView
+                    android:id="@+id/tv_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="分享到朋友圈"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_32px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_invitefriend"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/mapcarfrg_havecarremind_bg_selector"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/invitation_weixin"></View>
+
+                <TextView
+                    android:id="@+id/tv_invitefriend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="邀请微信好友"
+                    android:textColor="@color/titlebar_background"
+                    android:textSize="@dimen/textsize_32px" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

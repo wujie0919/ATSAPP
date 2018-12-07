@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="25dip"
+        android:gravity="left"
+        android:lineSpacingMultiplier="1.5"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:text="押金以信用卡预授权方式进行支付，30日后自动解冻。在无违章状态下支付一次，15天内重复租车无需再次支付押金。"
+        android:textColor="#565d62"
+        android:textSize="@dimen/textsize_27px" />
+
+
+    <TextView
+        android:id="@+id/auth_item_cad_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="15dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/mapcarfrg_fastrentcar_selector"
+        android:gravity="center"
+        android:text="支付押金"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_textsize" />
+
+
+</LinearLayout>

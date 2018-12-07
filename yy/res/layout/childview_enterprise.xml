@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <View
+            android:id="@+id/dash_line"
+            android:layout_width="wrap_content"
+            android:layout_height="1.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dash_line"></View>
+
+        <TextView
+            android:id="@+id/tv_businessname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="27dp"
+            android:text="星辰出行"
+            android:textColor="#525b63"
+            android:textSize="@dimen/textsize_30px" />
+
+        <TextView
+            android:id="@+id/txt_yuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="27dp"
+            android:text="元"
+            android:textColor="#525b63"
+            android:textSize="@dimen/textsize_30px" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/txt_yuan"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text=""
+            android:textColor="@color/titlebar_background"
+            android:textSize="@dimen/textsize_30px" />
+
+        <TextView
+            android:id="@+id/txt_yue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_number"
+            android:text="余额："
+            android:textColor="#525b63"
+            android:textSize="@dimen/textsize_30px" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/item_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="11dip"
+        android:background="@drawable/text_meesage_time_bg"
+        android:gravity="center"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:text="0000-00-00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18px" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="15dip">
+
+
+        <com.dzrcx.jiaan.widget.CustomRoundImageView
+            android:id="@+id/item_message_iamge"
+            android:layout_width="38dip"
+            android:layout_height="38dip"
+            android:layout_marginLeft="12dip"
+            android:src="@drawable/ic_launcher" />
+
+
+        <TextView
+            android:id="@+id/item_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="37dip"
+            android:background="@drawable/item_message_textview_bg"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="5dip"
+            android:paddingBottom="12dip"
+            android:paddingLeft="30dip"
+            android:paddingRight="12dip"
+            android:paddingTop="10dip"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_27px" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

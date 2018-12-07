@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="12dp">
+
+        <TextView
+            android:id="@+id/tv_break_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2016-06-23  12:34:02"
+            android:textColor="@color/text_a6a6a6"
+            android:textSize="@dimen/textsize_26px" />
+
+        <TextView
+            android:id="@+id/tv_break_cartxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:text="奇瑞EQ 京 n8929"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_26px" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/line_hight_0_5"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_eeeeee"></View>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_breaktxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="14dp"
+
+        android:text="奇瑞EQ 京"
+        android:textColor="@color/text_3d3f42"
+        android:textSize="@dimen/textsize_26px" />
+
+    <TextView
+        android:id="@+id/tv_breakplace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="17dp"
+        android:text="违章地点：北京朝阳区酒仙桥中路到讲台十字路口"
+        android:textColor="@color/text_a6a6a6"
+        android:textSize="@dimen/textsize_24px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_pay_statu"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="需支付"
+            android:textColor="@color/titlebar_background"
+            android:textSize="@dimen/textsize_26px" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="200元"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_26px"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_money_tupe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_toLeftOf="@+id/tv_money"
+            android:text="罚款"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_26px" />
+
+        <TextView
+            android:id="@+id/tv_bottom_middletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/tv_money_tupe"
+            android:layout_toRightOf="@+id/tv_pay_statu"
+            android:gravity="center"
+            android:text="扣分3"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_26px" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:background="@color/bgcolor"></View>
+</LinearLayout>

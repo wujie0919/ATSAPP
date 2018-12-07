@@ -1,0 +1,105 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="main_tab_height">55dp</dimen>
+    <dimen name="main_tab_textview_height">1.6dp</dimen>
+    <dimen name="main_tab_imageview_height">2.6dp</dimen>
+
+    <!-- 订单Tab弹框宽度和高度 -->
+    <dimen name="alertdialog_height">174dp</dimen>
+    <dimen name="alertdialog_width">298dp</dimen>
+
+    <!-- 左侧菜单的宽度 -->
+    <dimen name="leftmenu_width">300dip</dimen>
+    <dimen name="leftmenu_item_height">50dip</dimen>
+    <dimen name="leftmenu_item_height_min">40dip</dimen>
+    <dimen name="leftmenu_item_image_width">16dip</dimen>
+    <dimen name="leftmenu_item_image_height">16dip</dimen>
+    <dimen name="leftmenu_item_lable_marginleft">48dip</dimen>
+    <dimen name="leftmenu_item_line_margin">20dip</dimen>
+    <dimen name="leftmenu_item_line_height">1px</dimen>
+    <dimen name="leftmenu_item_lable_size">@dimen/textsize_26px</dimen>
+    <!-- title文字大小 -->
+    <dimen name="title_txt">@dimen/textsize_34px</dimen>
+    <dimen name="titleleft_txt">@dimen/textsize_26px</dimen>
+    <!-- 车辆详情 -->
+
+
+    <!-- button textSize -->
+    <dimen name="button_textsize">@dimen/textsize_30px</dimen>
+    <dimen name="button_height">44dip</dimen>
+
+    <!-- 分割线宽 -->
+    <dimen name="list_line_hight">1dp</dimen>
+    <dimen name="line_hight">0.6dp</dimen>
+    <dimen name="line_hight_0_5">0.5dp</dimen>
+    <!-- 分割线宽 -->
+
+    <dimen name="car_name_style">@dimen/textsize_28px</dimen>
+    <!-- 订单列表 -->
+
+
+    <!-- 文字大小 -->
+    <dimen name="textsize_58px">29sp</dimen>
+    <dimen name="textsize_46px">23sp</dimen>
+    <dimen name="textsize_45px">22.5sp</dimen>
+    <dimen name="textsize_44px">22sp</dimen>
+    <dimen name="textsize_43px">21.5sp</dimen>
+    <dimen name="textsize_42px">21sp</dimen>
+    <dimen name="textsize_41px">20.5sp</dimen>
+    <dimen name="textsize_40px">20sp</dimen>
+    <dimen name="textsize_39px">19.5sp</dimen>
+    <dimen name="textsize_38px">19sp</dimen>
+    <dimen name="textsize_37px">18.5sp</dimen>
+    <dimen name="textsize_36px">18sp</dimen>
+    <dimen name="textsize_35px">17.5sp</dimen>
+    <dimen name="textsize_34px">17sp</dimen>
+    <dimen name="textsize_33px">16.5sp</dimen>
+    <dimen name="textsize_32px">16sp</dimen>
+    <dimen name="textsize_31px">15.5sp</dimen>
+    <dimen name="textsize_30px">15sp</dimen>
+    <dimen name="textsize_29px">14.5sp</dimen>
+    <dimen name="textsize_28px">14sp</dimen>
+    <dimen name="textsize_27px">13.5sp</dimen>
+    <dimen name="textsize_26px">13sp</dimen>
+    <dimen name="textsize_25px">12.5sp</dimen>
+    <dimen name="textsize_24px">12sp</dimen>
+    <dimen name="textsize_23px">11.5sp</dimen>
+    <dimen name="textsize_22px">11sp</dimen>
+    <dimen name="textsize_21px">10.5sp</dimen>
+    <dimen name="textsize_20px">10sp</dimen>
+    <dimen name="textsize_19px">9.5sp</dimen>
+    <dimen name="textsize_18px">9sp</dimen>
+    <dimen name="textsize_17px">8.5sp</dimen>
+    <dimen name="textsize_16px">8sp</dimen>
+    <dimen name="textsize_15px">7.5sp</dimen>
+    <dimen name="textsize_14px">7sp</dimen>
+    <dimen name="textsize_13px">6.5sp</dimen>
+    <dimen name="textsize_12px">6sp</dimen>
+    <dimen name="textsize_11px">5.5sp</dimen>
+    <dimen name="textsize_10px">5sp</dimen>
+    <!-- 文字大小 -->
+
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    <dimen name="ui_radius">2dp</dimen>
+
+    <dimen name="location_icon_with">18dip</dimen>
+    <dimen name="location_icon_iamge_with">8dip</dimen>
+
+    <!--长按钮高度-->
+    <dimen name="long_button">44dip</dimen>
+    <!--提示框圆角-->
+    <dimen name="dlg_radius">5dip</dimen>
+    <!--普通线框圆角-->
+    <dimen name="stroke_radius">3dip</dimen>
+    <dimen name="picker_default_text_size">12sp</dimen>
+    <dimen name="picker_toolbar_height">40dp</dimen>
+    <dimen name="picker_dialog_height">150dp</dimen>
+    <dimen name="textview_default_padding">5dp</dimen>
+    <dimen name="picker_line_width">1dp</dimen>
+    <dimen name="picker_line_mar">15dp</dimen>
+    <dimen name="picker_height">230dp</dimen>
+</resources>

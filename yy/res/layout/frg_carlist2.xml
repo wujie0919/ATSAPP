@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <!--
+    ptr:ptrAnimationStyle="flip"  flip:翻转  rotate:旋转
+    ptr:ptrShowIndicator="true"  右上角 右下角出现箭头
+    ptr:ptrDrawable=“” 上拉下拉图标
+    ptr:ptrAnimationStyle=""  图标动画  取值： flip:翻转 rotate旋转
+    ptr:ptrHeaderBackground=""  上拉下拉时 头部的背景色
+    ptr:ptrHeaderTextColor=""     上拉下拉时 文字颜色
+    ptrRefreshableViewBackground 设置整个mPullRefreshListView的背景色
+    ptrScrollingWhileRefreshingEnabled刷新的时候，是否允许ListView或GridView滚动。觉得为true比较好。
+    ptrListViewExtrasEnabled 决定了Header，Footer以何种方式加入mPullRefreshListView，true为headView方式加入，就是滚动时刷新头部会一起滚动。
+    -->
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pull_refresh_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_title"
+        android:background="#f1f1f1"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrHeaderBackground="#383838"
+        ptr:ptrHeaderTextColor="#FFFFFF">
+
+        <com.dzrcx.jiaan.widget.PinnedSectionListView
+            android:id="@+id/pinnedSectionListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/sp_line"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:scrollbars="none" />
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</RelativeLayout>

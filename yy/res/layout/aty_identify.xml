@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f4f6">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl_title"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="25dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="72dip"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/auth_pic1" />
+
+                <View
+                    android:layout_width="6dip"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="0dp"
+                    android:layout_height="72dip"
+                    android:layout_weight="2"
+                    android:layout_marginRight="15dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/auth_pic0" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:lineSpacingExtra="5dip"
+                android:text="请准确填写以下信息并上传身份证和驾照正副本，便于客服最快为您完成审核，谢谢~"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_28px" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="13dip"
+                android:background="@drawable/layout_bg_style1">
+
+                <TextView
+                    android:id="@+id/identfy_lable0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="14dip"
+                    android:gravity="center_vertical|left"
+                    android:text="真实姓名"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+
+                <EditText
+                    android:id="@+id/identfy_name_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_toRightOf="@+id/identfy_lable0"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入真实姓名"
+                    android:paddingLeft="8dip"
+                    android:singleLine="true"
+                    android:textColorHint="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_28px" />
+
+
+                <View
+                    android:id="@+id/identfy_line0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/identfy_lable0"
+                    android:layout_marginLeft="14dip"
+                    android:background="@color/sp_line" />
+
+                <TextView
+                    android:id="@+id/identfy_lable1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:layout_below="@+id/identfy_line0"
+                    android:layout_marginLeft="14dip"
+                    android:gravity="center_vertical|left"
+                    android:text="身份证号"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+
+                <EditText
+                    android:id="@+id/identfy_no_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_below="@+id/identfy_line0"
+                    android:layout_toRightOf="@+id/identfy_lable1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入18位身份证号码"
+                    android:maxLength="18"
+                    android:paddingLeft="8dip"
+                    android:singleLine="true"
+                    android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ"
+                    android:textColorHint="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <View
+                    android:id="@+id/identfy_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/identfy_lable1"
+                    android:layout_marginLeft="14dip"
+                    android:background="@color/sp_line" />
+
+
+                <TextView
+                    android:id="@+id/identfy_lable2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:layout_below="@+id/identfy_line1"
+                    android:layout_marginLeft="14dip"
+                    android:gravity="center_vertical|left"
+                    android:text="领证日期"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+
+                <TextView
+                    android:id="@+id/identfy_date_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_below="@+id/identfy_line1"
+                    android:layout_toRightOf="@+id/identfy_lable2"
+                    android:gravity="center_vertical"
+                    android:hint="请选择驾驶证领证日期"
+                    android:paddingLeft="8dip"
+                    android:singleLine="true"
+                    android:textColor="@color/text_3d3f42"
+                    android:textColorHint="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_28px" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/identfy_sfz_layout"
+                    android:layout_width="150dip"
+                    android:layout_height="100dip"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="13dip"
+                    android:background="@drawable/layout_bg_style1">
+
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dip"
+                        android:src="@drawable/valuation_and_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="60dip"
+                        android:text="上传身份证照片" />
+
+
+                    <ImageView
+                        android:id="@+id/identfy_sfz_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/identfy_sfz_remove"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignRight="@+id/identfy_sfz_layout"
+                    android:layout_marginBottom="-15dip"
+                    android:layout_marginRight="-10dip"
+                    android:padding="5dip"
+                    android:src="@drawable/icon_camera_remove" />
+
+
+                <RelativeLayout
+                    android:id="@+id/identfy_jsz_layout"
+                    android:layout_width="150dip"
+                    android:layout_height="100dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="13dip"
+                    android:background="@drawable/layout_bg_style1">
+
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dip"
+                        android:src="@drawable/valuation_and_icon" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="60dip"
+                        android:text="上传驾照正副本" />
+
+                    <ImageView
+                        android:id="@+id/identfy_jsz_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1px" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/identfy_jsz_remove"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignRight="@+id/identfy_jsz_layout"
+                    android:layout_marginBottom="-15dip"
+                    android:layout_marginRight="-10dip"
+                    android:padding="5dip"
+                    android:src="@drawable/icon_camera_remove" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dip"
+                android:lineSpacingExtra="5dip"
+                android:text="为保障您的出行权益，请务必填写您本人真实的身份信息，上传的身份证和驾照正副本同时会作为实名信息进行验证。"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/auth_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/mapcarfrg_fastrentcar_selector"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_textsize" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dip"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="点击提交即表示同时"
+            android:textColor="@color/text_a6a6a6"
+            android:textSize="@dimen/textsize_20px" />
+
+        <TextView
+            android:id="@+id/auth_iamge_authxieyi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:text="《租客认证协议》"
+            android:textColor="@color/titlebar_background"
+            android:textSize="@dimen/textsize_20px" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

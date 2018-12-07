@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/companyaccount_spitline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="17dip" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#dbdbdb" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="17dip"
+                android:gravity="center_vertical"
+                android:text="企业账户名称"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_26px" />
+
+
+            <TextView
+                android:id="@+id/companyaccount_label0"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="17dip"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="17dip"
+            android:background="@color/line_eeeeee" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="17dip"
+                android:gravity="center_vertical"
+                android:text="部门账户额度"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_26px" />
+
+
+            <TextView
+                android:id="@+id/companyaccount_label1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="17dip"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="17dip"
+            android:background="@color/line_eeeeee" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="17dip"
+                android:gravity="center_vertical"
+                android:text="部门账户余额"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_26px" />
+
+
+            <TextView
+                android:id="@+id/companyaccount_label2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="17dip"
+                android:gravity="center_vertical"
+                android:textColor="@color/titlebar_background"
+                android:textSize="@dimen/textsize_26px" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/line_eeeeee" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drakeet="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/butoon_style_single_sle"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dip"
+        android:gravity="center"
+        android:text="分享攒人品"
+        android:textColor="@color/text_a6a6a6"
+        android:textSize="@dimen/textsize_34px" />
+
+
+    <TextView
+        android:id="@+id/share_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:text="分享给好友可"
+        android:textColor="@color/text_3d3f42"
+        android:textSize="@dimen/textsize_28px" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.dzrcx.jiaan.widget.UIImageView
+                android:id="@+id/uiv_weixin"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="18dp"
+                android:src="@drawable/share_weixin3"
+                drakeet:shape_type="round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="微信好友"
+                android:textColor="#525b63"
+                android:textSize="@dimen/textsize_28px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.dzrcx.jiaan.widget.UIImageView
+                android:id="@+id/uiv_weixin_circle"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="18dp"
+                android:src="@drawable/share_weixincircle3"
+                drakeet:shape_type="round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="朋友圈"
+                android:textColor="#525b63"
+                android:textSize="@dimen/textsize_28px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/sp_line" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/butoon_style_single_sle"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#525b63" />
+</LinearLayout>

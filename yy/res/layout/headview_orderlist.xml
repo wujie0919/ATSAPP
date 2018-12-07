@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bgcolor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="11dp"
+        android:paddingTop="11dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_totaltime"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/totaltime" />
+
+            <TextView
+                android:id="@+id/tv_totaltime_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_totaltime"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="累计时长"
+                android:textColor="#515b64"
+                android:textSize="@dimen/textsize_26px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_totaltime_txt"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <com.dzrcx.jiaan.widget.RiseNumberTextView
+                    android:id="@+id/tv_totaltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#515b64"
+                    android:textSize="@dimen/textsize_26px"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 小时"
+                    android:textColor="#515b64"
+                    android:textSize="@dimen/textsize_26px" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#99D6D6D6"></View>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_totalmileag"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/totalmileage" />
+
+            <TextView
+                android:id="@+id/tv_totalmileag_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_totalmileag"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="累计里程"
+                android:textColor="#515b64"
+                android:textSize="@dimen/textsize_26px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_totalmileag_txt"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <com.dzrcx.jiaan.widget.RiseNumberTextView
+                    android:id="@+id/tv_totalmileag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#515b64"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 公里"
+                    android:textColor="#515b64"
+                    android:textSize="@dimen/textsize_26px" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#99D6D6D6"></View>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_totalmoney"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/totalmoney" />
+
+            <TextView
+                android:id="@+id/tv_totalmoney_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_totalmoney"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="累计费用"
+                android:textColor="#515b64"
+                android:textSize="@dimen/textsize_26px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_totalmoney_txt"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <com.dzrcx.jiaan.widget.RiseNumberTextView
+                    android:id="@+id/tv_totalmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#515b64"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=" 元"
+                    android:textColor="#515b64"
+                    android:textSize="@dimen/textsize_26px" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

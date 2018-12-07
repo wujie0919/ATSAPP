@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_gavecartop"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/gavecar_attention"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="请确认还车注意事项"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_30px" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_gavecarbottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_parklegal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="22.5dp"
+                android:background="@drawable/dialog_gavecarbutton"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_parklegal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="确认车辆停放位置合法"
+                    android:textColor="@drawable/dialog_gavecarbutton_txt_check"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <ImageView
+                    android:id="@+id/v_parklegal"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/dialog_gavecar_selector"
+                    android:visibility="visible"></ImageView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_closedoor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="22.5dp"
+                android:background="@drawable/dialog_gavecarbutton"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_closedoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="确认拔出钥匙拉起手刹"
+                    android:textColor="@drawable/dialog_gavecarbutton_txt_check"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <View
+                    android:id="@+id/v_closedoor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/dialog_gavecar_selector"
+                    android:visibility="visible"></View>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_takethings"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="22.5dp"
+                android:background="@drawable/dialog_gavecarbutton"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_takethings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="确认私人物品全部带走"
+                    android:textColor="@drawable/dialog_gavecarbutton_txt_check"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <View
+                    android:id="@+id/v_takethings"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/dialog_gavecar_selector"
+                    android:visibility="visible"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_sureclosecar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="22.5dp"
+                android:background="@drawable/dialog_gavecarbutton"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_sureclosecar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="确认车窗车门完全关闭"
+                    android:textColor="@drawable/dialog_gavecarbutton_txt_check"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <View
+                    android:id="@+id/v_sureclosecar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/dialog_gavecar_selector"
+                    android:visibility="visible"></View>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

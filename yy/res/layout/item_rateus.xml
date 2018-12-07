@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rateus_adp_itembg"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="6dip"
+        android:paddingLeft="3dip"
+        android:paddingRight="3dip"
+        android:paddingTop="6dip"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@drawable/rateus_adp_itemtextbg"
+        android:textSize="@dimen/textsize_26px" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/companyac_toast_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffcc00"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="15dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="友情提示："
+            android:textColor="#ff5351"
+            android:textSize="@dimen/textsize_26px" />
+
+        <TextView
+            android:id="@+id/companyac_toast_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="当企业余额不足时，会影响您的企业租车业务，请您及时充值。"
+            android:textColor="#3a3a30"
+            android:textSize="@dimen/textsize_26px" />
+    </LinearLayout>
+
+</RelativeLayout>

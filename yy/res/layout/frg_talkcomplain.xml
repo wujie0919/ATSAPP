@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <RelativeLayout
+        android:id="@+id/rl_talk_servicetype"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_talk_servicetype"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="请选择服务类型"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_26px" />
+
+        <View
+            android:id="@+id/top_raw"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bottom_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_talk_servicetype"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="12dip"
+        android:paddingTop="15dip">
+
+        <EditText
+            android:id="@+id/talk_ed"
+            android:layout_width="match_parent"
+            android:layout_height="90dip"
+            android:background="@null"
+            android:gravity="left|top"
+            android:hint="您的吐槽是我们前进的动力（300字以内）"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/text_3d3f42"
+            android:textColorHint="@color/text_a6a6a6"
+            android:textSize="@dimen/textsize_26px" />
+
+        <GridView
+            android:id="@+id/talk_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:background="@null"
+            android:gravity="center"
+            android:numColumns="3">
+
+        </GridView>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/talk_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dip"
+        android:layout_marginLeft="28dip"
+        android:layout_marginRight="28dip"
+        android:background="@drawable/mapcarfrg_fastrentcar_selector"
+        android:gravity="center"
+        android:text="发送"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_28px" />
+
+
+</RelativeLayout>

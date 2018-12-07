@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="15dip"
+        android:lineSpacingExtra="5dip"
+        android:text="账户迁移会将旧账户中的身份认证信息、个人账户余额、租车押金等转移到新账户中，同时优惠券的使用情况也会被同步覆盖，而旧账户也会被系统作废处理。"
+        android:textColor="@color/text_a6a6a6"
+        android:textSize="@dimen/textsize_25px" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="25dip"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dip"
+            android:gravity="center_vertical"
+
+            android:text="旧账户手机号"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_32px" />
+
+
+        <EditText
+            android:id="@+id/transferone_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="29dip"
+            android:background="@null"
+            android:hint="请输入要迁移账户的旧手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true"
+            android:textColor="@color/text_3d3f42"
+            android:textColorHint="@color/text_a6a6a6"
+            android:textSize="@dimen/textsize_27px" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/transferone_next"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:text="下一步 "
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_38px" />
+
+
+</LinearLayout>

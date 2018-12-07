@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drakeet="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/addialog_uplayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:id="@+id/addialog_downlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/addialog_close"
+                android:layout_width="28dip"
+                android:layout_height="28dip"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ad_close" />
+
+            <View
+                android:id="@+id/addialog_line"
+                android:layout_width="1.5dip"
+                android:layout_height="22.5dip"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/addialog_close"
+                android:layout_marginRight="12.75dip"
+                android:background="#FFFFFF" />
+
+            <RelativeLayout
+                android:id="@+id/addialog_imagelayout"
+                android:layout_width="match_parent"
+                android:layout_height="442dip"
+                android:layout_below="@+id/addialog_line">
+
+                <RelativeLayout
+                    android:id="@+id/addialog_image"
+                    android:layout_width="331dip"
+                    android:layout_height="442dip"
+                    android:layout_marginTop="-442dip"
+                    android:background="@drawable/alertdialog_bg">
+
+                    <TextView
+                        android:id="@+id/tv_sendmoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="35dp"
+                        android:text="分享好友得0元大奖"
+                        android:textSize="@dimen/textsize_30px" />
+
+                    <ImageView
+                        android:layout_width="190dp"
+                        android:layout_height="120dp"
+                        android:layout_below="@+id/tv_sendmoney"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="42dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/share_sendmoney" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="25dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <com.dzrcx.jiaan.widget.UIImageView
+                                android:id="@+id/uiv_weixin"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="18dp"
+                                android:src="@drawable/share_weixin2"
+                                drakeet:shape_type="round" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="微信好友"
+                                android:textColor="#525b63"
+                                android:textSize="@dimen/textsize_28px" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="25dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <com.dzrcx.jiaan.widget.UIImageView
+                                android:id="@+id/uiv_weixin_circle"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="18dp"
+                                android:src="@drawable/share_weixincircle2"
+                                drakeet:shape_type="round" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="朋友圈"
+                                android:textColor="#525b63"
+                                android:textSize="@dimen/textsize_28px" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

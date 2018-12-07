@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/rl_title"
+        layout="@layout/title_lay"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_type"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="违章订单："
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+            <TextView
+                android:id="@+id/tv_cartext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="租用车辆："
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+            <TextView
+                android:id="@+id/tv_getcar_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="取车时间："
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+            <TextView
+                android:id="@+id/tv_gavecar_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+
+            <TextView
+                android:id="@+id/tv_breaktime"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="违章时间："
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+            <TextView
+                android:id="@+id/tv_breakwhere"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="违章地点:"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <View
+                android:id="@+id/line_where"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+            <TextView
+                android:id="@+id/tv_breaktype"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="违章类型： "
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp">
+
+                <TextView
+                    android:id="@+id/tv_break_punish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="违章处罚："
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="#fafafa"></View>
+
+                <TextView
+                    android:id="@+id/tv_break_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="罚款元"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:paddingLeft="12dp">
+
+                <TextView
+                    android:id="@+id/tv_breakprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:text="违章进度："
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_hight_0_5"
+                android:background="@color/line_eeeeee"></View>
+
+            <TextView
+                android:id="@+id/tv_needtopay"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:text="需支付金额："
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fafafa"></View>
+
+            <TextView
+                android:id="@+id/tv_nowpay"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/mapcarfrg_fastrentcar_selector"
+                android:gravity="center"
+                android:text="立即支付"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_30px" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

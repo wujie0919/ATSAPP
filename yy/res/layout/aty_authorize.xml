@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor">
+
+    <include
+        android:id="@+id/searchcar_bar"
+        layout="@layout/title_lay" />
+
+
+    <TextView
+        android:id="@+id/searchcar_lable1"
+        android:layout_width="match_parent"
+        android:layout_height="43dip"
+        android:layout_below="@+id/searchcar_bar"
+        android:background="#e65a58"
+        android:gravity="center"
+        android:text="为保障双方合法权益，需支付租车押金"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_28px" />
+
+
+    <LinearLayout
+        android:id="@+id/searchcar_lable2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/searchcar_lable1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip">
+
+
+        <RelativeLayout
+            android:id="@+id/searchcar_button1"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="信用卡支付"
+                android:textColor="@drawable/author_lable_text_sel"
+                android:textSize="@dimen/textsize_28px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/author_line_bg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchcar_button2"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="充值免押金"
+                android:textColor="@drawable/author_lable_text_sel"
+                android:textSize="@dimen/textsize_28px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/author_line_bg" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/searchcar_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchcar_lable2">
+
+    </android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

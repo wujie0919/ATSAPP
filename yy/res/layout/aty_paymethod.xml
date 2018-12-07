@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="123dip"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dip"
+                android:layout_marginTop="23dip"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_order_car"
+                    android:layout_width="84dip"
+                    android:layout_height="56dip"
+                    android:background="@color/line_eeeeee"
+                    android:scaleType="fitXY" />
+
+
+                <TextView
+                    android:id="@+id/tv_order_carmode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_toRightOf="@+id/iv_order_car"
+                    android:text=""
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_30px" />
+
+
+                <TextView
+                    android:id="@+id/tv_order_carno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_toRightOf="@+id/tv_order_carmode"
+                    android:text=""
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_30px" />
+
+
+                <TextView
+                    android:id="@+id/tv_order_spendtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="13dp"
+                    android:layout_toRightOf="@+id/iv_order_car"
+                    android:background="@drawable/mapcarfrg_fastrentcar_nor"
+                    android:gravity="center"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:text="------"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_22px" />
+
+                <TextView
+                    android:id="@+id/tv_order_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/tv_order_spendtime"
+                    android:background="@drawable/mapcarfrg_fastrentcar_nor"
+                    android:gravity="center"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:text="------"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_22px" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dip"
+                android:layout_marginRight="37dip"
+                android:layout_marginTop="25dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="1px"
+                    android:layout_weight="1"
+                    android:background="@color/stroke_cccccc" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:text="车费详情"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_22px" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="1px"
+                    android:layout_weight="1"
+                    android:background="@color/stroke_cccccc" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip"
+            android:layout_marginTop="10dip">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单提交时间"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+
+            <TextView
+                android:id="@+id/tv_order_time0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip"
+            android:layout_marginTop="10dip">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始计费时间"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+
+            <TextView
+                android:id="@+id/tv_order_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip"
+            android:layout_marginTop="10dip">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确认还车时间"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+
+            <TextView
+                android:id="@+id/tv_order_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip"
+            android:layout_marginTop="10dip">
+
+            <TextView
+                android:id="@+id/tv_order_temp_lable0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用车费用合计"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+
+            <TextView
+                android:id="@+id/tv_order_todetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dip"
+                android:text="计费明细 >"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_22px" />
+
+            <TextView
+                android:id="@+id/tv_order_price0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ly_order_benefit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip"
+            android:layout_marginTop="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实际支付费用"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+
+            <TextView
+                android:id="@+id/tv_order_price2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip"
+            android:layout_marginTop="25dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/stroke_cccccc" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:text="支付方式"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_22px" />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="@color/stroke_cccccc" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip">
+
+            <ImageView
+                android:id="@+id/iv_order_pay_temp_0"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_pay_account" />
+
+
+            <TextView
+                android:id="@+id/tv_order_pay_temp_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_order_pay_temp_0"
+                android:text="个人账户余额抵扣"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+
+
+            <TextView
+                android:id="@+id/tv_order_price3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/titlebar_background"
+                android:textSize="@dimen/textsize_24px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_order_pay_user"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip">
+
+            <ImageView
+                android:id="@+id/iv_order_pay_temp_4"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_pay_account" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_order_pay_temp_4"
+                android:text="个人账户支付"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+
+
+            <ImageView
+                android:id="@+id/iv_order_pay_user"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/order_pay_channel_sel" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_order_pay_ali"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip">
+
+            <ImageView
+                android:id="@+id/iv_order_pay_temp_1"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_pay_ali" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_order_pay_temp_1"
+                android:text="支付宝支付"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+
+
+            <ImageView
+                android:id="@+id/iv_order_pay_ali"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/order_pay_channel_sel" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_order_pay_wx"
+            android:layout_width="match_parent"
+            android:layout_height="42dip"
+            android:layout_marginLeft="37dip"
+            android:layout_marginRight="37dip">
+
+            <ImageView
+                android:id="@+id/iv_order_pay_temp_2"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_pay_wx" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_order_pay_temp_2"
+                android:text="微信支付"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_24px" />
+
+
+            <ImageView
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/order_pay_channel_sel" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/order_pay_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/mapcarfrg_fastrentcar_selector"
+        android:gravity="center"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_30px" />
+
+
+</RelativeLayout>

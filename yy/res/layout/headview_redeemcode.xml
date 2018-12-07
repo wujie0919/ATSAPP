@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_ad_heard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_ad_heard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_close_heard"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:padding="9dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/close_ad" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_ad_heard"
+        android:background="@color/white"
+        android:paddingLeft="15dip"
+        android:visibility="gone"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_inputcodetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginTop="21dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="请输入兑换码"
+            android:textColor="#525b63"
+            android:textSize="@dimen/textsize_30px" />
+
+        <TextView
+            android:id="@+id/tv_redeemcode"
+            android:layout_width="81dp"
+            android:layout_height="42.5dip"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_inputcodetxt"
+            android:background="@drawable/identify_color_selector"
+            android:gravity="center"
+            android:text="兑换"
+            android:textColor="@drawable/fenshijiagefront_selector"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_redeemcode"
+            android:layout_width="match_parent"
+            android:layout_height="42.5dip"
+            android:layout_below="@id/tv_inputcodetxt"
+            android:layout_marginBottom="22.5dp"
+            android:layout_marginRight="12.5dp"
+            android:layout_toLeftOf="@id/tv_redeemcode"
+            android:background="@drawable/edit_layout_bg"
+            android:gravity="center_vertical"
+            android:hint=""
+            android:maxLength="16"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textColor="#979b9c"
+            android:textColorHint="#c6c6c8"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/couponlist_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/rl_top"
+        android:background="@color/bgcolor"
+        android:gravity="left|center_vertical"
+        android:text=" "
+        android:textColor="#525b53"
+        android:textSize="@dimen/textsize_30px"
+        android:visibility="visible" />
+</RelativeLayout>

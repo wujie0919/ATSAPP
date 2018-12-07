@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_carguidedetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/cvp_carguidedetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"></android.support.v4.view.ViewPager>
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="120dp"
+            android:layout_height="33dp"
+            android:layout_alignBottom="@id/cvp_carguidedetail"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/car_next_selector"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@drawable/car_next_front_selector"
+            android:textSize="@dimen/textsize_30px"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:padding="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/dialog_close" />
+    </RelativeLayout>
+
+</RelativeLayout>

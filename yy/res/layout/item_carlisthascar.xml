@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="9dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="9dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.dzrcx.jiaan.widget.RoundImageView
+                    android:id="@+id/rc_carimg"
+                    android:layout_width="32dp"
+                    android:src="@color/white"
+                    android:layout_height="32dp"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/round_gray_background" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_carnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textview"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_28px"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/v_elctric"
+                    android:layout_width="25dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/mapcarvpadp_electric"></View>
+
+                <TextView
+                    android:id="@+id/tv_elctric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="   "
+                    android:textSize="@dimen/textsize_28px" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/white"
+         android:paddingBottom="15dp"
+         android:paddingLeft="13dp"
+         android:paddingTop="15dp">
+
+         <RelativeLayout
+             android:id="@+id/rl_carimg"
+             android:layout_width="140dp"
+             android:layout_height="94dp"
+             android:background="@drawable/mapcarfrg_top_location_bg_nor">
+
+             <com.dzrcx.jiaan.widget.RoundCornersImageViewAll
+                 android:id="@+id/rc_carimg"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_centerInParent="true"
+                 android:layout_margin="@dimen/line_hight_0_5"
+                 android:scaleType="fitXY"
+                 app:roundHeight="3dp"
+                 app:roundWidth="3dp" />
+
+             <View
+                 android:id="@+id/v_gavestyle"
+                 android:layout_width="45dp"
+                 android:layout_height="45dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginRight="@dimen/line_hight_0_5"
+                 android:layout_marginTop="@dimen/line_hight_0_5"></View>
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="94dp"
+             android:layout_marginLeft="15dp"
+             android:layout_toRightOf="@+id/rl_carimg">
+
+             <TextView
+                 android:id="@+id/tv_carnumber"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textColor="@color/text_3d3f42"
+                 android:textSize="@dimen/textsize_26px"
+                 android:textStyle="bold" />
+
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/tv_carnumber"
+                 android:layout_marginTop="9dp"
+                 android:orientation="horizontal">
+
+                 <View
+                     android:id="@+id/v_elctric"
+                     android:layout_width="25dp"
+                     android:layout_height="12dp"
+                     android:layout_gravity="center_vertical"
+                     android:background="@drawable/mapcarvpadp_electric"></View>
+
+                 <TextView
+                     android:id="@+id/tv_elctric"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:layout_marginLeft="8dp"
+                     android:gravity="center"
+                     android:text=""
+                     android:textSize="@dimen/textsize_30px" />
+             </LinearLayout>
+
+
+             <TextView
+                 android:id="@+id/tv_startpricetxt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentBottom="true"
+                 android:textSize="@dimen/textsize_24px" />
+
+             <TextView
+                 android:id="@+id/tv_price"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_above="@+id/tv_startpricetxt"
+                 android:layout_marginBottom="8dp"
+                 android:textSize="@dimen/textsize_24px" />
+         </RelativeLayout>
+     </RelativeLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_eeeeee"></View>
+</RelativeLayout>

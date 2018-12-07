@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <LinearLayout
+        android:id="@+id/sv_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@color/white">
+
+
+                <View
+                    android:layout_width="17dip"
+                    android:layout_height="17dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dip"
+                    android:background="@drawable/car_get1" />
+
+                <TextView
+                    android:id="@+id/create_order_getstation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="40dip"
+                    android:text="取车地点："
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:id="@+id/ll_give_back_station"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dip"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="17dip"
+                        android:layout_height="17dip"
+                        android:layout_marginLeft="12dip"
+                        android:background="@drawable/car_back1" />
+
+
+                    <TextView
+                        android:id="@+id/create_order_backstation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="9dp"
+                        android:gravity="center_vertical"
+                        android:hint="点击选择还车位置"
+                        android:textColor="@color/text_3d3f42"
+                        android:textColorHint="@color/text_a6a6a6"
+                        android:textSize="@dimen/textsize_26px" />
+
+                    <View
+                        android:id="@+id/create_order_backstation_more"
+                        android:layout_width="12dip"
+                        android:layout_height="18dip"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/icon_more_right"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_free_give_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal"
+                    android:paddingLeft="22dp"
+                    android:paddingRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/iv_free_give_back"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/no_check" />
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="自由还车"
+                        android:textColor="@color/text_3d3f42"
+                        android:textSize="@dimen/textsize_26px" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_day_give_back_station"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical|left"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dip"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="17dip"
+                        android:layout_height="17dip"
+                        android:layout_marginLeft="12dip"
+                        android:background="@drawable/car_back1" />
+
+
+                    <TextView
+                        android:id="@+id/tv_day_give_back_station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="9dp"
+                        android:gravity="center_vertical"
+                        android:hint="原站点还车"
+                        android:textColor="@color/text_3d3f42"
+                        android:textColorHint="@color/text_a6a6a6"
+                        android:textSize="@dimen/textsize_26px" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="12dp"
+                android:background="@color/line_eeeeee" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dip"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="33dip"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/create_order_lable1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dip"
+                    android:text="计价方式"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dip"
+                    android:layout_toRightOf="@+id/create_order_lable1"
+                    android:gravity="center_vertical"
+                    android:paddingRight="25dip"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_26px" />
+                <!--android:text="(按时间和里程计费，不收取电费)"-->
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5px"
+                android:layout_marginLeft="12dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_pricing_manner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="19dp">
+
+                        <ImageView
+                            android:id="@+id/iv_pricing_manner"
+                            android:layout_width="76dp"
+                            android:layout_height="34dp"
+                            android:background="@drawable/time_share" />
+
+                        <TextView
+                            android:id="@+id/tv_pricing_manner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="分时用车"
+                            android:textColor="@color/text_3d3f42"
+                            android:textSize="@dimen/textsize_28px" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="12dip"
+                        android:layout_height="18dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="18dip"
+                        android:background="@drawable/icon_more_right" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line_eeeeee" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/textview"
+                            android:textColor="@color/titlebar_background"
+                            android:textSize="@dimen/textsize_28px" />
+
+                        <TextView
+                            android:id="@+id/tv_x_multiple"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:text="x2"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_28px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingRight="12dp">
+
+                        <TextView
+                            android:id="@+id/tv_proment_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:text="用车时长最低一小时起"
+                            android:textColor="@color/text_3d3f42"
+                            android:textSize="@dimen/textsize_28px" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:id="@+id/create_order_layout_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/create_order_deposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:gravity="center_vertical"
+                        android:text="请支付租车押金1000元(可退)"
+                        android:textColor="@color/text_3d3f42" />
+
+
+                    <View
+                        android:id="@+id/create_order_question"
+                        android:layout_width="15dip"
+                        android:layout_height="15dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dip"
+                        android:background="@drawable/question" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="12dip"
+                        android:background="@color/line_eeeeee" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/create_order_layout_changepaylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/create_order_payicon"
+                        android:layout_width="31dip"
+                        android:layout_height="31dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:background="@drawable/icon_ali" />
+
+                    <TextView
+                        android:id="@+id/create_order_paytext"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dip"
+                        android:layout_toRightOf="@+id/create_order_payicon"
+                        android:gravity="center_vertical"
+                        android:text="使用支付宝支付"
+                        android:textColor="@color/text_3d3f42"
+                        android:textSize="@dimen/textsize_26px" />
+
+
+                    <View
+                        android:id="@+id/create_order_pay_more"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dip"
+                        android:background="@drawable/icon_more_down" />
+
+                    <TextView
+                        android:id="@+id/create_order_pay_more_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/create_order_pay_more"
+                        android:gravity="center_vertical"
+                        android:paddingRight="6dip"
+                        android:text="更多支付方式"
+                        android:textColor="@color/stroke_cccccc"
+                        android:textSize="@dimen/textsize_22px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/line_eeeeee" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/create_order_pay_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="18dip"
+                android:layout_marginTop="8dip"
+                android:lineSpacingExtra="6dip"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_22px"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/create_order_layout_payover"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="@color/white">
+
+
+                <View
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:visibility="gone"
+                    android:background="@drawable/icon_create_over" />
+
+                <TextView
+                    android:id="@+id/tv_order_payover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dip"
+                    android:gravity="center_vertical"
+                    android:text="押金重复使用中, 本次用车无需支付押金"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_choose_account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_choose_account"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_choose_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dip"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:lines="1"
+                        android:maxEms="6"
+                        android:text="个人账户"
+                        android:textColor="@color/titlebar_background" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text=">"
+                        android:textColor="@color/titlebar_background" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/create_order_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="44dip"
+                    android:layout_marginLeft="12dip"
+                    android:layout_marginRight="12dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:text="确认订单"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/create_order_lable2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="12dip"
+                    android:text="点击确认下单，即表示同意"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_22px"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/create_order_xieyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_toRightOf="@+id/create_order_lable2"
+                    android:text="《星辰出行汽车租赁协议》"
+                    android:textColor="@color/titlebar_background"
+                    android:textSize="@dimen/textsize_22px"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.baidu.mapapi.map.MapView
+                    android:id="@+id/create_order_baidumap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_give_back_car_explain"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/give_back_car_explain" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

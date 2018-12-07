@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/user_deposit_hint_img"
+            android:layout_width="38dip"
+            android:layout_height="38dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dip"
+            android:background="@drawable/user_tishi" />
+
+
+        <TextView
+            android:id="@+id/user_deposit_hint_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="85dip"
+            android:text="租车押金提现提示"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_28px" />
+
+
+        <View
+            android:id="@+id/user_deposit_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="32.5dip"
+            android:layout_marginRight="32.5dip"
+            android:layout_marginTop="120dp"
+            android:background="#d4d4d4" />
+
+
+        <TextView
+            android:id="@+id/user_deposit_line_messge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_deposit_line"
+            android:layout_marginLeft="32.5dip"
+            android:layout_marginRight="32.5dip"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="8dip"
+            android:text="系统检测到您最近一次订单有违章记录，还未进行处理，暂时无法操作申请提现功能，给您带来的不便，请您原谅~"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_26px" />
+
+        <LinearLayout
+            android:id="@+id/user_deposit_line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_deposit_line"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="100dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="0.5dip"
+                    android:layout_weight="1"
+                    android:background="#d4d4d4" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dip"
+                    android:layout_marginRight="16dip"
+                    android:text="提现金额"
+                    android:textColor="@color/stroke_cccccc"
+                    android:textSize="@dimen/textsize_22px" />
+
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="0.5dip"
+                    android:layout_weight="1"
+                    android:background="#d4d4d4" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/user_deposit_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="----元"
+                android:textColor="@color/titlebar_background"
+                android:textSize="@dimen/textsize_30px" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/user_deposit_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:layout_below="@+id/user_deposit_line"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="200dip"
+            android:background="@drawable/mapcarfrg_fastrentcar_selector"
+            android:gravity="center"
+            android:text="知道了"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

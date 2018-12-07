@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <TextView
+        android:id="@+id/tv_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#979b9c"
+        android:textSize="@dimen/textsize_26px" />
+
+    <RelativeLayout
+        android:id="@+id/rl_identify"
+        android:layout_width="84dp"
+        android:layout_height="38dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_alarm"
+        android:layout_marginRight="36dp">
+
+        <TextView
+            android:id="@+id/tv_identify"
+            android:layout_width="match_parent"
+            android:layout_height="38dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mapcarfrg_havecarremind_bg_selector"
+            android:gravity="center"
+            android:text="验证码"
+            android:textColor="@color/titlebar_background"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:layout_below="@id/tv_alarm"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/rl_identify"
+        android:background="@drawable/edit_layout_bg"
+        android:gravity="center_vertical"
+        android:hint="请输入手机号码"
+        android:inputType="number"
+        android:maxLength="11"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColor="@color/text_3d3f42"
+        android:textColorHint="#c6c6c8"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="38dip"
+        android:layout_below="@id/et_phonenumber"
+        android:layout_marginLeft="36dip"
+        android:layout_marginRight="36dip"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_layout_bg"
+        android:gravity="center_vertical"
+        android:hint="请输入验证码"
+        android:inputType="number"
+        android:maxLength="10"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:singleLine="true"
+        android:textColor="@color/text_3d3f42"
+        android:textColorHint="#c6c6c8"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@id/et_code"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/mapcarfrg_fastrentcar_selector"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_textsize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_login"
+        android:layout_marginTop="14dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击登录，表示您已同意"
+            android:textColor="#a9a9a9"
+            android:textSize="@dimen/textsize_24px" />
+
+        <TextView
+            android:id="@+id/tv_document"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/lawyer_str"
+            android:textColor="#a9a9a9"
+            android:textSize="@dimen/textsize_24px" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fafafa"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp">
+
+
+                <TextView
+                    android:id="@+id/tv_setup_user_car_time_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="请设置用车时间"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_sub"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:gravity="center_vertical|right">
+
+                        <LinearLayout
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/left_shape"
+                            android:gravity="center_vertical|right">
+
+                            <ImageView
+                                android:id="@+id/iv_sub"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/sub_image" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!--  <ImageView
+                          android:id="@+id/iv_sub"
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:src="@drawable/sub_gray" />-->
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:background="@color/line_eeeeee" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/center_shape"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_use_day"
+                                android:layout_width="0dp"
+                                android:layout_height="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="1天"
+                                android:textColor="@color/titlebar_background"
+                                android:textSize="@dimen/textsize_26px" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--  <TextView
+                          android:id="@+id/tv_use_day"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="5dp"
+                          android:layout_weight="1"
+                          android:gravity="center"
+                          android:text="1天"
+                          android:textColor="@color/titlebar_background"
+                          android:textSize="@dimen/textsize_26px" />
+  -->
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:background="@color/line_eeeeee" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_add"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:gravity="center_vertical|left">
+
+                        <LinearLayout
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/right_shape"
+                            android:gravity="center_vertical|left">
+
+                            <ImageView
+                                android:id="@+id/iv_add"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/add_image" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <!--  <ImageView
+                          android:id="@+id/iv_add"
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:layout_marginLeft="5dp"
+                          android:src="@drawable/add_gray" />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="22dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_get_car_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取车时间"
+                        android:textColor="@color/text_a6a6a6"
+                        android:textSize="@dimen/textsize_28px" />
+
+                    <TextView
+                        android:id="@+id/tv_get_car_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/textview"
+                        android:textSize="@dimen/textsize_28px" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="51dp"
+                    android:background="@color/line_eeeeee" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_give_back_car_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="还车时间"
+                        android:textColor="@color/text_a6a6a6"
+                        android:textSize="@dimen/textsize_28px" />
+
+                    <TextView
+                        android:id="@+id/tv_give_back_car_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/textview"
+                        android:textColor="@color/titlebar_background"
+                        android:textSize="@dimen/textsize_28px" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_total_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="共计用车费用"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/textview"
+                    android:textColor="@color/titlebar04b575"
+                    android:textSize="@dimen/textsize_28px" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:id="@+id/ll_coupons"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="优惠券抵扣"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="-0.0元"
+                    android:textColor="@color/titlebar04b575"
+                    android:textSize="@dimen/textsize_28px" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:background="@color/fafafa"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择支付方式"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_28px" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:id="@+id/ll_account_pay"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/selector_ll_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/account" />
+
+                <TextView
+                    android:id="@+id/tv_account_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="使用个人账户余额"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <TextView
+                    android:id="@+id/tv_no_money"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="余额不足 请先充值 >"
+                    android:textColor="@color/f09800"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <ImageView
+                    android:id="@+id/iv_account_pay"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/no_check_gray" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:id="@+id/ll_weixin_pay"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/selector_ll_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/weixin" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="使用微信支付"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+
+                <ImageView
+                    android:id="@+id/iv_weixin_pay"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/check_green" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/line_eeeeee" />
+
+            <LinearLayout
+                android:id="@+id/ll_ali_pay"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/selector_ll_background"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/zhifubao" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="使用支付宝支付"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_28px" />
+
+                <ImageView
+                    android:id="@+id/iv_ali_pay"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/no_check_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fafafa"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="22dp">
+
+                <Button
+                    android:id="@+id/btn_commit"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/shape_button04b575"
+                    android:text="确认支付"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_35px" />
+
+                <TextView
+                    android:id="@+id/tv_hint"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="提示: 车辆将为您锁定5分钟, 请在5分钟内完成支付" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

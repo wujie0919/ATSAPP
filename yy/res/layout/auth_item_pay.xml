@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dip"
+        android:background="#f4f4f4"
+        android:gravity="center"
+        android:text="账户余额大于1500元可免押金租车"
+        android:textColor="#595c5c"
+        android:textSize="@dimen/textsize_26px" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dip"
+                android:layout_marginLeft="23dip"
+                android:layout_marginTop="21dip"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="请输入充值金额"
+                android:textColor="#525b63"
+                android:textSize="@dimen/textsize_30px" />
+
+
+            <TextView
+                android:id="@+id/recharge_benefit"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="23dip"
+                android:layout_marginTop="21dip"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:text="当前余额  元"
+                android:textColor="#585858"
+                android:textSize="@dimen/textsize_28px" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="34dip"
+            android:layout_marginLeft="23dip"
+            android:layout_marginRight="23dip">
+
+            <EditText
+                android:id="@+id/recharge_edit"
+                android:layout_width="match_parent"
+                android:layout_height="43dip"
+                android:background="@drawable/edit_layout_bg"
+                android:digits="0123456789"
+                android:gravity="right|center_vertical"
+                android:hint=""
+                android:inputType="number"
+                android:numeric="integer"
+                android:paddingLeft="10dip"
+                android:paddingRight="30dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/titlebar_background"
+                android:textSize="@dimen/textsize_28px" />
+
+            <TextView
+                android:id="@+id/yuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="元"
+                android:textColor="#bcbcbc"
+                android:textSize="@dimen/textsize_29px" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="8dip"
+        android:background="@color/white"
+
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/recharge_ali"
+            android:layout_width="match_parent"
+            android:layout_height="63dip"
+            android:background="@drawable/item_click_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="39dip"
+                android:layout_height="39dip"
+                android:layout_marginLeft="23dip"
+                android:background="@drawable/icon_ali" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_weight="1"
+                android:text="支付宝支付"
+                android:textColor="#525b63"
+                android:textSize="@dimen/textsize_28px" />
+
+            <View
+                android:layout_width="12dip"
+                android:layout_height="18dip"
+                android:layout_marginRight="22dip"
+                android:background="@drawable/icon_more_right" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.6dip"
+            android:layout_marginLeft="78dip"
+            android:background="@color/sp_line" />
+
+        <LinearLayout
+            android:id="@+id/recharge_weixin"
+            android:layout_width="match_parent"
+            android:layout_height="63dip"
+            android:background="@drawable/item_click_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="39dip"
+                android:layout_height="39dip"
+                android:layout_marginLeft="23dip"
+                android:background="@drawable/icon_weixin" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dip"
+                android:layout_weight="1"
+                android:text="微信支付"
+                android:textColor="#525b63"
+                android:textSize="@dimen/textsize_28px" />
+
+            <View
+                android:layout_width="12dip"
+                android:layout_height="18dip"
+                android:layout_marginRight="22dip"
+                android:background="@drawable/icon_more_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dip"
+        android:background="#f4f4f4"
+        android:gravity="center_horizontal"
+        android:text="@string/reminder"
+        android:textColor="#575757"
+        android:textSize="@dimen/textsize_26px" />
+
+
+</LinearLayout>

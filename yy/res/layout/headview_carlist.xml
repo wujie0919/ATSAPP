@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_station"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+
+    <!--<RelativeLayout
+        android:id="@+id/ll_station"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_26px" />
+
+        <View
+            android:id="@+id/v_icon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/carlist_itemtoplocation" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/v_icon"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_a6a6a6"
+            android:textSize="@dimen/textsize_26px" />
+
+    </RelativeLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_line_hight"
+        android:layout_below="@+id/ll_ll"
+        android:background="@color/line_eeeeee" />
+
+    <LinearLayout
+        android:id="@+id/ll_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="9dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="22dp"
+        android:paddingTop="9dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/v_plate"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/plate" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_3d3f42"
+                android:text="@string/textview"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/v_icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/carlist_itemtoplocation" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

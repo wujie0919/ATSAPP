@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+
+    <TextView
+        android:id="@+id/checkcar_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="14dip"
+        android:lineSpacingExtra="6dip"
+        android:text="为保障您的用车权益，请在用车前检查车辆是否存在损坏情况，检查后也需要对车辆相关位置拍照上传，以免后期还车造成不必要的纠纷，谢谢您的合作，祝您用车愉快~"
+        android:textColor="@color/text_a6a6a6"
+        android:textSize="@dimen/textsize_26px" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkcar_toast"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="16dip"
+        android:text="请按顺序上传车辆位置照片"
+        android:textColor="@color/text_3d3f42"
+        android:textSize="@dimen/textsize_30px" />
+
+    <LinearLayout
+        android:id="@+id/checkcar_imagely0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkcar_toast"
+        android:layout_marginTop="35dip"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/checkcar_item_0"
+                android:layout_width="84dip"
+                android:layout_height="84dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/check_car_item_bg">
+
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="21dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/icon_camera" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dip"
+                    android:text="车辆左前拍照"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_20px" />
+
+
+                <ImageView
+                    android:id="@+id/checkcar_item_image_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/checkcar_item_remove_0"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignRight="@+id/checkcar_item_0"
+                android:layout_marginBottom="-15dip"
+                android:layout_marginRight="-10dip"
+                android:padding="5dip"
+                android:src="@drawable/icon_camera_remove"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/checkcar_item_1"
+                android:layout_width="84dip"
+                android:layout_height="84dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/check_car_item_bg">
+
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="21dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/icon_camera" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dip"
+                    android:text="车辆右前拍照"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_20px" />
+
+
+                <ImageView
+                    android:id="@+id/checkcar_item_image_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/checkcar_item_remove_1"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignRight="@+id/checkcar_item_1"
+                android:layout_marginRight="-10dp"
+                android:padding="5dip"
+                android:src="@drawable/icon_camera_remove"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/checkcar_item_2"
+                android:layout_width="84dip"
+                android:layout_height="84dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/check_car_item_bg">
+
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="21dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/icon_camera" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dip"
+                    android:text="车辆右侧拍照"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_20px" />
+
+
+                <ImageView
+                    android:id="@+id/checkcar_item_image_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/checkcar_item_remove_2"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignRight="@+id/checkcar_item_2"
+                android:layout_marginRight="-10dp"
+                android:padding="5dip"
+                android:src="@drawable/icon_camera_remove"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkcar_imagely1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkcar_imagely0"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/checkcar_item_3"
+                android:layout_width="84dip"
+                android:layout_height="84dip"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/check_car_item_bg">
+
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="21dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/icon_camera" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dip"
+                    android:text="车辆右后拍照"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_20px" />
+
+
+                <ImageView
+                    android:id="@+id/checkcar_item_image_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/checkcar_item_remove_3"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignRight="@+id/checkcar_item_3"
+                android:layout_marginBottom="-15dip"
+                android:layout_marginRight="-10dip"
+                android:padding="5dip"
+                android:src="@drawable/icon_camera_remove"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/checkcar_item_4"
+                android:layout_width="84dip"
+                android:layout_height="84dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/check_car_item_bg">
+
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="21dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/icon_camera" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dip"
+                    android:text="车辆左后拍照"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_20px" />
+
+
+                <ImageView
+                    android:id="@+id/checkcar_item_image_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/checkcar_item_remove_4"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignRight="@+id/checkcar_item_4"
+                android:layout_marginRight="-10dp"
+                android:padding="5dip"
+                android:src="@drawable/icon_camera_remove"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1">
+
+
+            <RelativeLayout
+                android:id="@+id/checkcar_item_5"
+                android:layout_width="84dip"
+                android:layout_height="84dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/check_car_item_bg">
+
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="21dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:src="@drawable/icon_camera" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dip"
+                    android:text="车辆左侧拍照"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_20px" />
+
+
+                <ImageView
+                    android:id="@+id/checkcar_item_image_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/checkcar_item_remove_5"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignRight="@+id/checkcar_item_5"
+                android:layout_marginRight="-10dp"
+                android:padding="5dip"
+                android:src="@drawable/icon_camera_remove"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkcar_imagely1"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="10dip"
+        android:text="注：请保障上传的照片清晰辨别性高"
+        android:textColor="@color/text_a6a6a6"
+        android:textSize="@dimen/textsize_27px" />
+
+
+    <EditText
+        android:id="@+id/checkcar_item_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkcar_imagely1"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="45dip"
+        android:background="@drawable/edit_layout_style1_bg"
+        android:gravity="top"
+        android:hint="如有其它问题请输入500字以内的说明"
+        android:maxEms="500"
+        android:minHeight="90dip"
+        android:padding="10dip"
+        android:textColor="@color/text_3d3f42"
+        android:textColorHint="@color/text_cccccc"
+        android:textSize="@dimen/textsize_25px" />
+
+
+    <TextView
+        android:id="@+id/checkcar_submit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dip"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/button_bg"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_38px" />
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/speech_1"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_2"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_3"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_4"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_5"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_6"
+        android:duration="150" />
+
+    <item
+        android:drawable="@drawable/speech_7"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_8"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_9"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/speech_10"
+        android:duration="150" />
+
+
+</animation-list>

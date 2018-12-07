@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mapcarfrg_reminddlg_bg">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="25dp"
+            android:text="计费明细"
+            android:textColor="@color/text_3d3f42"
+            android:textSize="@dimen/textsize_30px"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="23dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="用车共计用时"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <TextView
+                    android:id="@+id/tv_usecartime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="内容内容内容"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="用车行驶里程"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <TextView
+                    android:id="@+id/tv_usecarmileage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="内容内容内容"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="用车公里计费"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <TextView
+                    android:id="@+id/tv_mileagefee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="内容内容内容"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="用车合计费用"
+                    android:textColor="@color/text_a6a6a6"
+                    android:textSize="@dimen/textsize_26px" />
+
+                <TextView
+                    android:id="@+id/tv_usecarfee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="内容内容内容"
+                    android:textColor="@color/text_3d3f42"
+                    android:textSize="@dimen/textsize_26px" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_content"
+            android:layout_marginTop="25dp"
+            android:background="@color/line_eeeeee" />
+
+        <TextView
+            android:id="@+id/tv_do_txt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/v_line"
+            android:background="@drawable/see_selector"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="知道了"
+            android:textColor="@color/titlebar_background"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</LinearLayout>

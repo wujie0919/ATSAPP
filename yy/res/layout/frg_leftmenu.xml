@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/leftmenu_width"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="top|right"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#36383b"
+        android:orientation="vertical">
+
+        <com.dzrcx.jiaan.widget.StatusView
+            android:layout_width="wrap_content"
+            android:layout_height="13dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_topersonal"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="120dip"
+
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="32dip">
+
+            <com.dzrcx.jiaan.widget.CustomRoundImageView
+                android:id="@+id/left_userimage"
+                android:layout_width="65dip"
+                android:layout_height="65dip"
+                android:src="@drawable/defualt_usericon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dip">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dip"
+                    android:layout_marginLeft="16dip"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/left_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_30px" />
+
+                        <View
+                            android:id="@+id/userLevel"
+                            android:layout_width="24dp"
+                            android:layout_height="12.5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/left_username" />
+                        <!-- <TextView
+                             android:id="@+id/left_userauth"
+                             android:layout_width="70dip"
+                             android:layout_height="25dip"
+                             android:layout_marginLeft="5dip"
+                             android:background="@drawable/icon_my_noverify"
+                             android:gravity="center"
+                             android:textColor="#3a3b36"
+                             android:textSize="@dimen/textsize_21px" />-->
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/left_userbalanceslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/left_userbalances"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="账户余额："
+                            android:textColor="#c0c0c1"
+                            android:textSize="@dimen/textsize_26px" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/left_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="登录"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_28px" />
+
+                    <View
+                        android:layout_width="30dip"
+                        android:layout_height="2dip"
+                        android:layout_marginTop="2dip"
+                        android:background="@color/titlebar_background" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/left_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="10"
+        android:gravity="top|right"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dip" />
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutauth"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_file" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="提交证件"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutaccount"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/icon_account" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="我的账户"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+
+            <TextView
+                android:id="@+id/left_account_lable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="20dip"
+                android:textColor="@color/titlebar_background"
+                android:textSize="@dimen/textsize_24px" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutorder"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_history" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="我的行程"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_recommend"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_recommend" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="推荐有奖"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutcall"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_call" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="客服电话"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+        <!--<com.dzrcx.jiaan.widget.YYRelativeLayout-->
+        <!--android:id="@+id/left_layouthelp"-->
+        <!--android:layout_width="@dimen/leftmenu_width"-->
+        <!--android:layout_height="0dip"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:minHeight="@dimen/leftmenu_item_height_min"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:maxHeightDimen="@dimen/leftmenu_item_height">-->
+
+        <!--<View-->
+        <!--android:layout_width="@dimen/leftmenu_item_image_width"-->
+        <!--android:layout_height="@dimen/leftmenu_item_image_height"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="@dimen/leftmenu_item_line_margin"-->
+        <!--android:background="@drawable/left_help" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="租车指南"-->
+        <!--android:textColor="@color/leftmenu_item_lable"-->
+        <!--android:textSize="@dimen/leftmenu_item_lable_size" />-->
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/leftmenu_item_line_height"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginLeft="@dimen/leftmenu_item_line_margin"-->
+        <!--android:background="@color/stroke_eeeeee" />-->
+        <!--</com.dzrcx.jiaan.widget.YYRelativeLayout>-->
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutcoupon"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_coupon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="出行优惠"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutmessages"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_messages" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="消息中心"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutuserhelp"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_help_two" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="用户帮助"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layouttweet"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_tweet" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="吐槽星辰"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutabout"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_about" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="关于我们"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutcomapnyaccout"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_comapny" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="企业账号"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+        <com.dzrcx.jiaan.widget.YYRelativeLayout
+            android:id="@+id/left_layoutevaluate"
+            android:layout_width="@dimen/leftmenu_width"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/leftmenu_item_height_min"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:maxHeightDimen="@dimen/leftmenu_item_height">
+
+            <View
+                android:layout_width="@dimen/leftmenu_item_image_width"
+                android:layout_height="@dimen/leftmenu_item_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@drawable/left_commend" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/leftmenu_item_lable_marginleft"
+                android:gravity="center_vertical"
+                android:text="评价我们"
+                android:textColor="@color/leftmenu_item_lable"
+                android:textSize="@dimen/leftmenu_item_lable_size" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/leftmenu_item_line_height"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+                android:background="@color/stroke_eeeeee" />
+        </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.dzrcx.jiaan.widget.YYRelativeLayout
+        android:id="@+id/left_layoutad"
+        android:layout_width="@dimen/leftmenu_width"
+        android:layout_height="130dip"
+        android:minHeight="130dip">
+
+
+        <ImageView
+            android:id="@+id/left_adimageview"
+            android:layout_width="227dip"
+            android:layout_height="102dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="18dip"
+            android:layout_marginLeft="@dimen/leftmenu_item_line_margin"
+            android:layout_marginRight="@dimen/leftmenu_item_line_margin"
+            android:layout_marginTop="11dip"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+    </com.dzrcx.jiaan.widget.YYRelativeLayout>
+
+
+</LinearLayout>

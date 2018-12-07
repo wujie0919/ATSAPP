@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_type_code"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/bgcolor"
+        android:gravity="center_vertical"
+        android:paddingLeft="21dp"
+        android:text=""
+        android:textColor="#505960"
+        android:textSize="@dimen/textsize_28px" />
+
+    <TextView
+        android:id="@+id/tv_type_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="21dp"
+        android:textColor="#848992"
+        android:textSize="@dimen/textsize_28px" />
+
+    <TextView
+        android:id="@+id/tv_type_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="17.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="21dp"
+        android:paddingRight="21dp"
+        android:singleLine="true"
+        android:textColor="#848992"
+        android:textSize="@dimen/textsize_28px" />
+
+    <TextView
+        android:id="@+id/tv_type_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="17.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="21dp"
+        android:textColor="#848992"
+        android:textSize="@dimen/textsize_28px" />
+
+    <LinearLayout
+        android:id="@+id/breakrules_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/dash_line" />
+
+
+        <TextView
+            android:id="@+id/breakrules_more_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:paddingBottom="16dip"
+            android:paddingLeft="21dip"
+            android:paddingRight="21dip"
+            android:paddingTop="13dip"
+            android:textColor="#13bb86"
+            android:textSize="@dimen/textsize_26px" />
+
+    </LinearLayout>
+</LinearLayout>

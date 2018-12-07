@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/accout_not_enough_toast"
+        android:layout_width="match_parent"
+        android:layout_height="61dip"
+        android:background="#FFcc00"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="友情提示："
+            android:textColor="#ff5353"
+            android:textSize="@dimen/textsize_26px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip"
+            android:text="您选择的账号余额不足，请选择其它账号付款。"
+            android:textColor="#3a3a30"
+            android:textSize="@dimen/textsize_26px" />
+
+
+    </LinearLayout>
+</LinearLayout>

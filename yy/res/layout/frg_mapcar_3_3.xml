@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_title"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top_location"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mapcarfrg_top_location_bg_nor"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/top_location"
+            android:layout_width="16dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mapcarfrg_toplocation"
+            android:scaleType="centerInside" />
+
+        <View
+            android:id="@+id/top_raw"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bottom_right" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/top_raw"
+            android:layout_toRightOf="@+id/top_location"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_morestation_remind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击选择附近租赁站点"
+                android:textColor="@color/titlebar_background"
+                android:textSize="@dimen/textsize_26px"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_26px" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_22px" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top_location"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/v_help_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/helpcenter_icon" />
+
+        <View
+            android:id="@+id/v_help_point"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignBottom="@+id/v_help_icon"
+            android:layout_alignRight="@+id/v_help_icon"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/mapcarfrg_message_point"></View>
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/v_help_icon"
+            android:background="@drawable/mapcarfrg_help_pop_bg">
+
+            <View
+                android:id="@+id/pop_raw"
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/mapcarfrg_toplocation_raw" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left|center_vertical"
+                android:paddingRight="13dp"
+                android:text=""
+                android:textColor="@color/titlebar_background"
+                android:textSize="@dimen/textsize_22px" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dip"
+        android:layout_marginLeft="12dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/location"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_fastrentcar"
+        android:layout_width="90dip"
+        android:layout_height="90dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_startcar" />
+
+        <ImageView
+            android:id="@+id/iv_fastrentcar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_startcar_"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:gravity="bottom|center"
+        android:orientation="vertical" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_iscaring"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/mapcarfrg_caring_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_order_statu"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/mapcarfrg_fastrentcar_selector"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_26px" />
+
+        <ImageView
+            android:id="@+id/iv_carimg"
+            android:layout_width="72.5dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerInside" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/iv_carimg"
+            android:layout_alignTop="@+id/iv_carimg"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_carimg"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_carnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_28px" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/v_elctric"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mapcarvpadp_electric"></ImageView>
+
+                <TextView
+                    android:id="@+id/tv_elctric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/v_elctric"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/titlebar_background"
+                    android:textSize="@dimen/textsize_30px" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

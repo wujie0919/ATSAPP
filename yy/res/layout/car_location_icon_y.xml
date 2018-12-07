@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/carstation_icon_y" />
+
+    <!--<com.dzrcx.jiaan.widget.SquareRelativeLayout
+
+        android:id="@+id/csrl_car_number"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="7.5dp"
+        android:layout_marginTop="5.5dp">
+
+        <TextView
+            android:id="@+id/tv_car_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="88"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_16px" />
+
+    </com.dzrcx.jiaan.widget.SquareRelativeLayout>-->
+    <TextView
+        android:id="@+id/tv_car_number"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="7.5dp"
+        android:layout_marginTop="5.5dp" />
+</RelativeLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor">
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/title_lay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tishi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="20dp"
+                android:text="用车过程中是否存在问题？请告知我们"
+                android:textColor="#525b63"
+                android:textSize="@dimen/textsize_28px" />
+
+            <RelativeLayout
+                android:id="@+id/rl_health"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="21dp"
+                android:paddingRight="17.5dp">
+
+                <TextView
+                    android:id="@+id/tv_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车内卫生存在问题"
+                    android:textColor="#838485" />
+
+                <ImageView
+                    android:id="@+id/iv_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/right_ok"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dip"
+                android:background="@color/sp_line"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_inoperable"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="21dp"
+                android:paddingRight="17.5dp">
+
+                <TextView
+                    android:id="@+id/tv_inoperable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无法通过app正常操作车辆"
+                    android:textColor="#838485" />
+
+                <ImageView
+                    android:id="@+id/iv_inoperable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/right_ok"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dip"
+                android:background="@color/sp_line"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_havehitch"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="21dp"
+                android:paddingRight="17.5dp">
+
+                <TextView
+                    android:id="@+id/tv_havehitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车辆本身拥有明显故障"
+                    android:textColor="#838485" />
+
+                <ImageView
+                    android:id="@+id/iv_havehitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/right_ok"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dip"
+                android:background="@color/sp_line"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_nocar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="21dp"
+                android:paddingRight="17.5dp">
+
+                <TextView
+                    android:id="@+id/tv_nocar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="找不到车辆"
+                    android:textColor="#838485" />
+
+                <ImageView
+                    android:id="@+id/iv_nocar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/right_ok"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_tishi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="20dp"
+                android:text=""
+                android:textColor="#525b63"
+                android:textSize="@dimen/textsize_28px" />
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint=""
+                android:padding="20dp"
+                android:textSize="@dimen/textsize_28px" />
+
+            <TextView
+                android:id="@+id/tv_commit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

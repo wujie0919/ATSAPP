@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/startpage_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/layout_startpage_background" />
+
+    <com.dzrcx.jiaan.widget.CustomRoundImageView
+        android:id="@+id/cv_userimage"
+        android:layout_width="74dip"
+        android:layout_height="74dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_userimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:text="欢迎您"
+        android:textColor="@color/text_3d3f42"
+        android:textSize="@dimen/textsize_24px" />
+
+    <LinearLayout
+        android:id="@+id/startpage_timelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="20dip"
+        android:paddingTop="16dip"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/startpage_time"
+            android:layout_width="27.5dip"
+            android:layout_height="27.5dip"
+            android:layout_marginRight="6dip"
+            android:background="@drawable/skip_button_bg"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_26px" />
+
+        <TextView
+            android:id="@+id/startpage_tonext"
+            android:layout_width="58dip"
+            android:layout_height="27.5dip"
+            android:background="@drawable/skip_button_bg"
+            android:gravity="center"
+            android:text="跳过"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_26px" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--透明白底灰色边框-底部车辆详情背景有用到-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="3dp" />
+
+    <solid android:color="#ffffff" />
+
+
+    <stroke
+        android:width="@dimen/line_hight_0_5"
+        android:color="@color/stroke_cccccc" />
+
+</shape>

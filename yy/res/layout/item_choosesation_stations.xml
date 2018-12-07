@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/leftmenue_selector"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/item_choosestation_station_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="18dip"
+        android:layout_marginTop="12dip"
+        android:paddingRight="60dip"
+        android:singleLine="true"
+        android:text="站点名称"
+        android:textColor="#525b63"
+        android:textSize="@dimen/textsize_30px" />
+
+    <TextView
+        android:id="@+id/item_choosestation_station_dis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dip"
+        android:layout_marginTop="12dip"
+        android:singleLine="true"
+        android:text="距离"
+        android:textColor="#13bb86"
+        android:textSize="@dimen/textsize_28px" />
+
+
+    <TextView
+        android:id="@+id/item_choosestation_station_loca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_choosestation_station_name"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="18dip"
+        android:layout_marginTop="10dip"
+        android:lineSpacingMultiplier="1.5"
+        android:paddingBottom="15dip"
+        android:text="街道"
+        android:textColor="#8f9090"
+        android:textSize="@dimen/textsize_24px" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignParentBottom="true"
+        android:background="#dfdfdf" />
+
+</RelativeLayout>

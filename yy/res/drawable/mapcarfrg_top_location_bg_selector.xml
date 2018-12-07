@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><!--透明白底灰色边框--><!--mapcarfrg界面顶部位置有用到  底部车辆详情计价说明有用到-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/mapcarfrg_top_location_bg_pre" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/mapcarfrg_top_location_bg_nor"></item>
+</selector>

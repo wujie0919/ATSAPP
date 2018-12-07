@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dip"
+        android:layout_marginRight="37dip"
+        android:layout_marginTop="10dip">
+
+        <TextView
+            android:id="@+id/tv_order_benefitname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用优惠券"
+            android:textColor="@color/titlebar_background"
+            android:textSize="@dimen/textsize_24px" />
+
+
+        <TextView
+            android:id="@+id/tv_order_benefitprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="订单提交时间"
+            android:textColor="@color/titlebar_background"
+            android:textSize="@dimen/textsize_24px" />
+    </RelativeLayout>
+</LinearLayout>
+

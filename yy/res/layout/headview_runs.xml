@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bgcolor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_invoicemoney"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_invoicemoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0元"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_32px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可开发票"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_hight_0_5"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+            android:background="@color/line_eeeeee"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_breaks"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_breaks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0次"
+                android:textColor="@color/text_3d3f42"
+                android:textSize="@dimen/textsize_32px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="违章事故"
+                android:textColor="@color/text_a6a6a6"
+                android:textSize="@dimen/textsize_24px" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
