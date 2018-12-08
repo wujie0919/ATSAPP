@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+.idea
+*.DS_Store # only needed under mac os
+/build
+/captures
+.externalNativeBuild
+*.apk #optional
+*/build/
+
+*.classpath
+
+*.settings
+*.project
