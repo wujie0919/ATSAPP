@@ -18,8 +18,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.mapapi.search.route.BikingRouteResult;
+import com.baidu.mapapi.search.route.IndoorRouteResult;
+import com.baidu.mapapi.search.route.MassTransitRouteResult;
 import com.dzrcx.jiaan.Constans.YYConstans;
-import com.dzrcx.jiaan.Order.BNDemoGuideActivity;
+//import com.dzrcx.jiaan.Order.BNDemoGuideActivity;
 import com.dzrcx.jiaan.R;
 import com.dzrcx.jiaan.YYApplication;
 import com.dzrcx.jiaan.base.YYBaseFragment;
@@ -48,8 +51,8 @@ import com.baidu.mapapi.search.route.TransitRouteResult;
 import com.baidu.mapapi.search.route.WalkingRoutePlanOption;
 import com.baidu.mapapi.search.route.WalkingRouteResult;
 import com.baidu.mapapi.utils.DistanceUtil;
-import com.baidu.navisdk.adapter.BNRoutePlanNode;
-import com.baidu.navisdk.adapter.BaiduNaviManager;
+//import com.baidu.navisdk.adapter.BNRoutePlanNode;
+//import com.baidu.navisdk.adapter.BaiduNaviManager;
 import com.google.gson.Gson;
 import com.umeng.analytics.MobclickAgent;
 
@@ -245,6 +248,21 @@ public class MapFrg extends YYBaseFragment implements
                 MyUtils.dip2px(mContext, 32)));
     }
 
+    @Override
+    public void onGetMassTransitRouteResult(MassTransitRouteResult massTransitRouteResult) {
+
+    }
+
+    @Override
+    public void onGetIndoorRouteResult(IndoorRouteResult indoorRouteResult) {
+
+    }
+
+    @Override
+    public void onGetBikingRouteResult(BikingRouteResult bikingRouteResult) {
+
+    }
+
     /**
      * 获取当前站点View
      */
@@ -378,91 +396,91 @@ public class MapFrg extends YYBaseFragment implements
                 getActivity().finish();
                 break;
             case R.id.map_navi:
-                if ((System.currentTimeMillis() - exitTime) > 2000) {
-                    boolean isInit = BaiduNaviManager.isNaviInited();
-                    if (BaiduNaviManager.isNaviInited() && pointVo != null) {
-                        routeplanToNavi(BNRoutePlanNode.CoordinateType.BD09LL, pointVo);
-                        exitTime = System.currentTimeMillis();
-                    }
-                }
+//                if ((System.currentTimeMillis() - exitTime) > 2000) {
+//                    boolean isInit = BaiduNaviManager.isNaviInited();
+//                    if (BaiduNaviManager.isNaviInited() && pointVo != null) {
+//                        routeplanToNavi(BNRoutePlanNode.CoordinateType.BD09LL, pointVo);
+//                        exitTime = System.currentTimeMillis();
+//                    }
+//                }
                 break;
 
         }
     }
 
-    private void routeplanToNavi(BNRoutePlanNode.CoordinateType coType, DistancePointVo disVo) {
-        BNRoutePlanNode sNode = null;
-        BNRoutePlanNode eNode = null;
-        switch (coType) {
-            case GCJ02: {
-                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null,
-                        coType);
-                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null,
-                        coType);
-                break;
-            }
-            case WGS84: {
-                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null,
-                        coType);
-                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null,
-                        coType);
-                break;
-            }
-            case BD09_MC: {
-                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null, coType);
-                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null,
-                        coType);
-                break;
-            }
-            case BD09LL: {
-                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null, coType);
-                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null, coType);
-                break;
-            }
-            default:
-        }
-        if (sNode != null && eNode != null) {
-            List<BNRoutePlanNode> list = new ArrayList<BNRoutePlanNode>();
-            list.add(sNode);
-            list.add(eNode);
-            BaiduNaviManager.getInstance().launchNavigator(getActivity(), list,
-                    1, true, new DemoRoutePlanListener(sNode));
-        }
-    }
+//    private void routeplanToNavi(BNRoutePlanNode.CoordinateType coType, DistancePointVo disVo) {
+//        BNRoutePlanNode sNode = null;
+//        BNRoutePlanNode eNode = null;
+//        switch (coType) {
+//            case GCJ02: {
+//                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null,
+//                        coType);
+//                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null,
+//                        coType);
+//                break;
+//            }
+//            case WGS84: {
+//                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null,
+//                        coType);
+//                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null,
+//                        coType);
+//                break;
+//            }
+//            case BD09_MC: {
+//                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null, coType);
+//                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null,
+//                        coType);
+//                break;
+//            }
+//            case BD09LL: {
+//                sNode = new BNRoutePlanNode(disVo.getLocationLng(), disVo.getLocationLat(), disVo.getLocaAdrrName(), null, coType);
+//                eNode = new BNRoutePlanNode(disVo.getTargetLng(), disVo.getTargetLat(), disVo.getTarAdrrName(), null, coType);
+//                break;
+//            }
+//            default:
+//        }
+//        if (sNode != null && eNode != null) {
+//            List<BNRoutePlanNode> list = new ArrayList<BNRoutePlanNode>();
+//            list.add(sNode);
+//            list.add(eNode);
+//            BaiduNaviManager.getInstance().launchNavigator(getActivity(), list,
+//                    1, true, new DemoRoutePlanListener(sNode));
+//        }
+//    }
 
-    public class DemoRoutePlanListener implements BaiduNaviManager.RoutePlanListener {
-
-        private BNRoutePlanNode mBNRoutePlanNode = null;
-
-        public DemoRoutePlanListener(BNRoutePlanNode node) {
-            mBNRoutePlanNode = node;
-        }
-
-        @Override
-        public void onJumpToNavigator() {
-            /*
-             * 设置途径点以及resetEndNode会回调该接口
-			 */
-
-            Intent intent = new Intent(mContext, BNDemoGuideActivity.class);
-            Bundle bundle = new Bundle();
-//            bundle.putSerializable(YYConstans.ROUTE_PLAN_NODE,
-//                    mBNRoutePlanNode);//序列化错误
-            Gson gson = new Gson();
-            String strJson = gson.toJson(mBNRoutePlanNode);
-            intent.putExtra(YYConstans.ROUTE_PLAN_NODE, strJson);
-
-            intent.putExtras(bundle);
-            startActivity(intent);
-
-        }
-
-        @Override
-        public void onRoutePlanFailed() {
-            // TODO Auto-generated method stub
-            MyUtils.showToast(mContext, "算路失败,请重试");
-        }
-    }
+//    public class DemoRoutePlanListener implements BaiduNaviManager.RoutePlanListener {
+//
+//        private BNRoutePlanNode mBNRoutePlanNode = null;
+//
+//        public DemoRoutePlanListener(BNRoutePlanNode node) {
+//            mBNRoutePlanNode = node;
+//        }
+//
+//        @Override
+//        public void onJumpToNavigator() {
+//            /*
+//             * 设置途径点以及resetEndNode会回调该接口
+//			 */
+//
+//            Intent intent = new Intent(mContext, BNDemoGuideActivity.class);
+//            Bundle bundle = new Bundle();
+////            bundle.putSerializable(YYConstans.ROUTE_PLAN_NODE,
+////                    mBNRoutePlanNode);//序列化错误
+//            Gson gson = new Gson();
+//            String strJson = gson.toJson(mBNRoutePlanNode);
+//            intent.putExtra(YYConstans.ROUTE_PLAN_NODE, strJson);
+//
+//            intent.putExtras(bundle);
+//            startActivity(intent);
+//
+//        }
+//
+//        @Override
+//        public void onRoutePlanFailed() {
+//            // TODO Auto-generated method stub
+//            MyUtils.showToast(mContext, "算路失败,请重试");
+//        }
+//    }
 
     // 定制RouteOverly
     private class MyWalkingRouteOverlay extends WalkingRouteOverlay {

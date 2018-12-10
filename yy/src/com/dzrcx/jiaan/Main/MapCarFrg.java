@@ -38,6 +38,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.mapapi.search.route.BikingRouteResult;
+import com.baidu.mapapi.search.route.IndoorRouteResult;
+import com.baidu.mapapi.search.route.MassTransitRouteResult;
 import com.dzrcx.jiaan.Bean.CreateOrderVO;
 import com.dzrcx.jiaan.Bean.EnterpriseCenterBean;
 import com.dzrcx.jiaan.Bean.EnterpriseItemInfo;
@@ -281,6 +284,22 @@ private int no_login_count = 1;
 //        YYRunner.getData(TAG_REQUESTRAILINFO, YYRunner.Method_POST,
 //                YYUrl.GETRAILINFO, params, this);
 //    }
+
+
+    @Override
+    public void onGetMassTransitRouteResult(MassTransitRouteResult massTransitRouteResult) {
+
+    }
+
+    @Override
+    public void onGetIndoorRouteResult(IndoorRouteResult indoorRouteResult) {
+
+    }
+
+    @Override
+    public void onGetBikingRouteResult(BikingRouteResult bikingRouteResult) {
+
+    }
 
     /**
      * 增加mark并显示在地图上

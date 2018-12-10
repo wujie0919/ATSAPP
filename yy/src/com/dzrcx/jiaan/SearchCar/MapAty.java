@@ -9,8 +9,8 @@ import android.widget.Toast;
 import com.dzrcx.jiaan.Constans.YYConstans;
 import com.dzrcx.jiaan.R;
 import com.dzrcx.jiaan.base.YYBaseActivity;
-import com.baidu.navisdk.adapter.BNOuterTTSPlayerCallback;
-import com.baidu.navisdk.adapter.BaiduNaviManager;
+//import com.baidu.navisdk.adapter.BNOuterTTSPlayerCallback;
+//import com.baidu.navisdk.adapter.BaiduNaviManager;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -23,9 +23,9 @@ public class MapAty extends YYBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yy_base_act);
-        if (!BaiduNaviManager.isNaviInited() && initDirs()) {
-            initNavi();
-        }
+//        if (!BaiduNaviManager.isNaviInited() && initDirs()) {
+//            initNavi();
+//        }
         MapFrg = new MapFrg();
         FragmentTransaction transaction = getSupportFragmentManager()
                 .beginTransaction();
@@ -66,50 +66,50 @@ public class MapAty extends YYBaseActivity {
 
     private String mSDCardPath = null;
 
-    public void initNavi() {
-        // BaiduNaviManager.getInstance().setNativeLibraryPath(mSDCardPath +
-        // "/BaiduNaviSDK_SO");
-
-
-        BNOuterTTSPlayerCallback ttsCallback = null;
-        try {
-            BaiduNaviManager.getInstance().init(this, mSDCardPath, APP_FOLDER_NAME, new BaiduNaviManager.NaviInitListener() {
-                @Override
-                public void onAuthResult(int status, String msg) {
-                    if (0 == status) {
-                        authinfo = "key校验成功!";
-                    } else {
-                        authinfo = "key校验失败 " + msg;
-                        MapAty.this.runOnUiThread(new Runnable() {
-
-                            @Override
-                            public void run() {
-                                Toast.makeText(MapAty.this, authinfo, Toast.LENGTH_LONG).show();
-                            }
-                        });
-                    }
-
-                }
-
-                public void initSuccess() {
-                    YYConstans.hasInitNavi = true;
-//                Toast.makeText(MapAty.this, "百度导航引擎初始化成功", Toast.LENGTH_SHORT).show();
-                }
-
-                public void initStart() {
-                }
-
-                public void initFailed() {
-                    Toast.makeText(MapAty.this, "百度导航引擎初始化失败", Toast.LENGTH_SHORT).show();
-                    YYConstans.hasInitNavi = false;
-                }
-
-            }, null/* null mTTSCallback */);
-        } catch (Exception e) {
-
-        }
-
-    }
+//    public void initNavi() {
+//        // BaiduNaviManager.getInstance().setNativeLibraryPath(mSDCardPath +
+//        // "/BaiduNaviSDK_SO");
+//
+//
+//        BNOuterTTSPlayerCallback ttsCallback = null;
+//        try {
+//            BaiduNaviManager.getInstance().init(this, mSDCardPath, APP_FOLDER_NAME, new BaiduNaviManager.NaviInitListener() {
+//                @Override
+//                public void onAuthResult(int status, String msg) {
+//                    if (0 == status) {
+//                        authinfo = "key校验成功!";
+//                    } else {
+//                        authinfo = "key校验失败 " + msg;
+//                        MapAty.this.runOnUiThread(new Runnable() {
+//
+//                            @Override
+//                            public void run() {
+//                                Toast.makeText(MapAty.this, authinfo, Toast.LENGTH_LONG).show();
+//                            }
+//                        });
+//                    }
+//
+//                }
+//
+//                public void initSuccess() {
+//                    YYConstans.hasInitNavi = true;
+////                Toast.makeText(MapAty.this, "百度导航引擎初始化成功", Toast.LENGTH_SHORT).show();
+//                }
+//
+//                public void initStart() {
+//                }
+//
+//                public void initFailed() {
+//                    Toast.makeText(MapAty.this, "百度导航引擎初始化失败", Toast.LENGTH_SHORT).show();
+//                    YYConstans.hasInitNavi = false;
+//                }
+//
+//            }, null/* null mTTSCallback */);
+//        } catch (Exception e) {
+//
+//        }
+//
+//    }
 
     private String getSdcardDir() {
         if (Environment.getExternalStorageState().equalsIgnoreCase(Environment.MEDIA_MOUNTED)) {

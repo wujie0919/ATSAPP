@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.baidu.mapapi.search.route.BikingRouteResult;
+import com.baidu.mapapi.search.route.IndoorRouteResult;
+import com.baidu.mapapi.search.route.MassTransitRouteResult;
 import com.dzrcx.jiaan.Bean.CreateOrderVO;
 import com.dzrcx.jiaan.Constans.YYConstans;
 import com.dzrcx.jiaan.R;
@@ -105,6 +108,21 @@ public class BaseBaiduMapFragment extends YYBaseFragment {
         mSearch.walkingSearch((new WalkingRoutePlanOption()).from(stNode).to(
                 enNode));
         mSearch.setOnGetRoutePlanResultListener(new OnGetRoutePlanResultListener() {
+
+            @Override
+            public void onGetMassTransitRouteResult(MassTransitRouteResult massTransitRouteResult) {
+
+            }
+
+            @Override
+            public void onGetIndoorRouteResult(IndoorRouteResult indoorRouteResult) {
+
+            }
+
+            @Override
+            public void onGetBikingRouteResult(BikingRouteResult bikingRouteResult) {
+
+            }
 
             @Override
             public void onGetWalkingRouteResult(WalkingRouteResult result) {

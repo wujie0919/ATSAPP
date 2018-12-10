@@ -1,19 +1,46 @@
 apply plugin: 'com.android.application'
 
 dependencies {
-    compile fileTree(include: '*.jar', dir: 'libs')
-    compile project(':library')
+    implementation fileTree(include: '*.jar', dir: 'libs')
+    implementation project(':library')
+    //permission
+//    implementation 'com.android.support:appcompat-v7:28.0.0'
+
+//    implementation 'pub.devrel:easypermissions:2.0.0'
+
 }
 
 android {
+
+
     signingConfigs {
+//        release {
+//            storeFile file('D:/keystore/ZLkeysone.keystore')
+//            storePassword '123456'
+//            keyAlias '星辰租赁'
+//            keyPassword '123456'
+//        }
+    }
+
+    buildTypes {
         release {
-            storeFile file('D:/keystore/ZLkeysone.keystore')
-            storePassword '123456'
-            keyAlias '星辰租赁'
-            keyPassword '123456'
+            //   开启混淆
+            minifyEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+//                signingConfig signingConfigs.release
+        }
+        debug {
+            //   开启混淆
+            minifyEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+//                signingConfig signingConfigs.release
         }
     }
+
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/NOTICE'
@@ -23,16 +50,17 @@ android {
         exclude 'META-INF/ASL2.0'
         exclude 'META-INF/notice.txt'
     }
-    compileSdkVersion 19
-    buildToolsVersion '25.0.2'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.dzrcx.jiaan"
-        minSdkVersion 9
-        targetSdkVersion 19
+        minSdkVersion 19
+        targetSdkVersion 26
         versionCode 30
         versionName "1.2.5"
         // dex突破65535的限制
         multiDexEnabled true
+        flavorDimensions "versionCode"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_7
@@ -61,45 +89,27 @@ android {
             assets.srcDirs = ['assets']
             jniLibs.srcDirs = ['libs']
         }
-        buildTypes {
-            release {
-                //   开启混淆
-                minifyEnabled true
-                // 移除无用的resource文件
-                shrinkResources false
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
-                signingConfig signingConfigs.release
-            }
-            debug {
-                //   开启混淆
-                minifyEnabled false
-                // 移除无用的resource文件
-                shrinkResources false
-                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
-                signingConfig signingConfigs.release
-            }
-        }
 
         //修改生成的apk名字
-        applicationVariants.all { variant ->
-            variant.outputs.each { output ->
-                def oldFile = output.outputFile
-                def newName = '';
-                if (variant.buildType.name.equals('release')) {
-                    def releaseApkName = defaultConfig.versionName + "_dzr-p-" + variant.productFlavors[0].name + ".apk"
-                    output.outputFile = new File(oldFile.parent, releaseApkName)
-                }
-                if (variant.buildType.name.equals('beta')) {
-                    newName = oldFile.name.replace(".apk", defaultConfig.versionName + "beta_dzr-p-" + variant.productFlavors[0].name + ".apk")
-                    output.outputFile = new File(oldFile.parent, newName)
-                }
-                if (variant.buildType.name.equals('debug')) {
-
-                }
-            }
-        }
+//        applicationVariants.all { variant ->
+//            variant.outputs.each { output ->
+//                def oldFile = output.outputFile
+//                def newName = '';
+//                if (variant.buildType.name.equals('release')) {
+//                    def releaseApkName = defaultConfig.versionName + "_dzr-p-" + variant.productFlavors[0].name + ".apk"
+//                    output.outputFile = new File(oldFile.parent, releaseApkName)
+//                }
+//                if (variant.buildType.name.equals('beta')) {
+//                    newName = oldFile.name.replace(".apk", defaultConfig.versionName + "beta_dzr-p-" + variant.productFlavors[0].name + ".apk")
+//                    output.outputFile = new File(oldFile.parent, newName)
+//                }
+//                if (variant.buildType.name.equals('debug')) {
+//
+//                }
+//            }
+//        }
         // Move the tests to tests/java, tests/res, etc...
-        instrumentTest.setRoot('tests')
+        androidTest.setRoot('tests')
 
         // Move the build types to build-types/<type>
         // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
@@ -112,6 +122,7 @@ android {
     }
     //studio2.x貌似不需要设置这个
     dexOptions {
-        incremental true
+//        incremental true
     }
+
 }

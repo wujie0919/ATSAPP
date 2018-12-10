@@ -30,9 +30,9 @@ import com.dzrcx.jiaan.yyinterface.FragmentCallActivity;
 import com.baidu.location.BDLocation;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.utils.DistanceUtil;
-import com.baidu.navisdk.adapter.BNOuterTTSPlayerCallback;
-import com.baidu.navisdk.adapter.BaiduNaviManager;
-import com.baidu.navisdk.adapter.BaiduNaviManager.NaviInitListener;
+//import com.baidu.navisdk.adapter.BNOuterTTSPlayerCallback;
+//import com.baidu.navisdk.adapter.BaiduNaviManager;
+//import com.baidu.navisdk.adapter.BaiduNaviManager.NaviInitListener;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -282,45 +282,45 @@ public class OrderAty extends YYBaseActivity implements RequestInterface,
 
     private String mSDCardPath = null;
 
-    private void initNavi() {
-        // BaiduNaviManager.getInstance().setNativeLibraryPath(mSDCardPath +
-        // "/BaiduNaviSDK_SO");
-
-
-        BNOuterTTSPlayerCallback ttsCallback = null;
-
-        BaiduNaviManager.getInstance().init(this, mSDCardPath, APP_FOLDER_NAME, new NaviInitListener() {
-            @Override
-            public void onAuthResult(int status, String msg) {
-                if (0 == status) {
-                    authinfo = "key校验成功!";
-                } else {
-                    authinfo = "key校验失败 " + msg;
-                    OrderAty.this.runOnUiThread(new Runnable() {
-
-                        @Override
-                        public void run() {
-                            Toast.makeText(OrderAty.this, authinfo, Toast.LENGTH_LONG).show();
-                        }
-                    });
-                }
-
-            }
-
-            public void initSuccess() {
-                YYConstans.hasInitNavi = true;
-            }
-
-            public void initStart() {
-            }
-
-            public void initFailed() {
-                Toast.makeText(OrderAty.this, "百度导航引擎初始化失败", Toast.LENGTH_SHORT).show();
-                YYConstans.hasInitNavi = false;
-            }
-
-        }, null/* null mTTSCallback */);
-    }
+//    private void initNavi() {
+//        // BaiduNaviManager.getInstance().setNativeLibraryPath(mSDCardPath +
+//        // "/BaiduNaviSDK_SO");
+//
+//
+//        BNOuterTTSPlayerCallback ttsCallback = null;
+//
+//        BaiduNaviManager.getInstance().init(this, mSDCardPath, APP_FOLDER_NAME, new NaviInitListener() {
+//            @Override
+//            public void onAuthResult(int status, String msg) {
+//                if (0 == status) {
+//                    authinfo = "key校验成功!";
+//                } else {
+//                    authinfo = "key校验失败 " + msg;
+//                    OrderAty.this.runOnUiThread(new Runnable() {
+//
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(OrderAty.this, authinfo, Toast.LENGTH_LONG).show();
+//                        }
+//                    });
+//                }
+//
+//            }
+//
+//            public void initSuccess() {
+//                YYConstans.hasInitNavi = true;
+//            }
+//
+//            public void initStart() {
+//            }
+//
+//            public void initFailed() {
+//                Toast.makeText(OrderAty.this, "百度导航引擎初始化失败", Toast.LENGTH_SHORT).show();
+//                YYConstans.hasInitNavi = false;
+//            }
+//
+//        }, null/* null mTTSCallback */);
+//    }
 
     private String getSdcardDir() {
         if (Environment.getExternalStorageState().equalsIgnoreCase(Environment.MEDIA_MOUNTED)) {
