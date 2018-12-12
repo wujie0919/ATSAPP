@@ -67,14 +67,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//import pub.devrel.easypermissions.AppSettingsDialog;
-//import pub.devrel.easypermissions.EasyPermissions;
+import pub.devrel.easypermissions.AppSettingsDialog;
+import pub.devrel.easypermissions.EasyPermissions;
 
 public class MainActivity2_1 extends YYBaseActivity implements
         RequestInterface, DrawerSlideHoldInterface,
         OnClickListener
-//       , EasyPermissions.PermissionCallbacks
-{
+        , EasyPermissions.PermissionCallbacks {
     private Context mContext;
     private long exitTime = 0;
     private LayoutInflater inflater;
@@ -131,9 +130,9 @@ public class MainActivity2_1 extends YYBaseActivity implements
 //        refresh();//检测2好站是否有车辆
 
         //检查权限
-//        checkAndRequestPermissions();
-//        gpsStatusReceiver = new GpsStatusReceiver();
-//        registGpsListenter();
+        checkAndRequestPermissions();
+        gpsStatusReceiver = new GpsStatusReceiver();
+        registGpsListenter();
     }
 
 
@@ -891,160 +890,160 @@ public class MainActivity2_1 extends YYBaseActivity implements
 //        }
 //    }
 
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//
-//        // Forward results to EasyPermissions
-//        //将结果传入EasyPermissions中
-//        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
-//    }
-//
-//    /**
-//     * 请求权限成功
-//     *
-//     * @param requestCode
-//     * @param perms
-//     */
-//    @Override
-//    public void onPermissionsGranted(int requestCode, List<String> perms) {
-//        mapCarFrg.requestLocationData(false);
-//    }
-//
-//    /**
-//     * 请求权限失败
-//     *
-//     * @param requestCode
-//     * @param perms
-//     */
-//    @Override
-//    public void onPermissionsDenied(int requestCode, List<String> perms) {
-//        /**
-//         * 若是在权限弹窗中，用户勾选了'NEVER ASK AGAIN.'或者'不在提示'，且拒绝权限。
-//         * 这时候，需要跳转到设置界面去，让用户手动开启。
-//         */
-//        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
-//            new AppSettingsDialog.Builder(this)
-//                    .setRationale("没有该权限，此应用程序可能无法正常工作。打开应用设置屏幕以修改应用权限")
-//                    .setTitle("必需权限")
-//                    .build()
-//                    .show();
-//        }
-//
-//    }
-//
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        switch (requestCode) {
-//            //当从软件设置界面，返回当前程序时候重新检查权限
-//            case AppSettingsDialog.DEFAULT_SETTINGS_REQ_CODE:
-//                checkAndRequestPermissions();
-//                break;
-//        }
-//    }
-//
-//    String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION};
-//
-//    private boolean hasPermissions() {
-//
-//        return EasyPermissions.hasPermissions(this, perms);
-//    }
-//
-//    /**
-//     * 检查百度地图所需的权限
-//     */
-//    public void checkAndRequestPermissions() {
-//        if (hasPermissions()) {
-//            if(!isOPen(this)){
-//                currentGPSState = false;
-//                //TODO 未打开GPS的业务处理逻辑
-//                Toast.makeText(this,"请打开GPS",Toast.LENGTH_LONG).show();
-//            }else{
-//                currentGPSState = true;
-//            }
-//        } else {
-//            // Ask for one permission
-//            EasyPermissions.requestPermissions(
-//                    this,
-//                    "申请权限   ",
-//                    0,
-//                    perms);
-//        }
-//    }
-//
-//    /**
-//     * 判断GPS是否开启，GPS或者AGPS开启一个就认为是开启的
-//     * @param context
-//     * @return true 表示开启
-//     */
-//    public static final boolean isOPen(final Context context) {
-//        LocationManager locationManager
-//                = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-//        // 通过GPS卫星定位，定位级别可以精确到街（通过24颗卫星定位，在室外和空旷的地方定位准确、速度快）
-//        boolean gps = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-//        // 通过WLAN或移动网络(3G/2G)确定的位置（也称作AGPS，辅助GPS定位。主要用于在室内或遮盖物（建筑群或茂密的深林等）密集的地方定位）
-//        boolean network = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-//        if (gps || network) {
-//            return true;
-//        }
-//
-//        return false;
-//    }
-//
-//    boolean currentGPSState = false;
-//
-//    GpsStatusReceiver gpsStatusReceiver ;
-//
-//    /**
-//     * 注册监听广播
-//     */
-//    public void registGpsListenter(){
-//        IntentFilter filter = new IntentFilter();
-//        filter.addAction(LocationManager.PROVIDERS_CHANGED_ACTION);
-//        this.registerReceiver(gpsStatusReceiver, filter);
-//    }
-//
-//    /**
-//     * 移除监听广播
-//     */
-//    public void unregistGpsListenter(){
-//        this.unregisterReceiver(gpsStatusReceiver);
-//        gpsStatusReceiver = null;
-//    }
-//
-//
-//    /**
-//     * 监听GPS 状态变化广播
-//     */
-//    public class GpsStatusReceiver extends BroadcastReceiver {
-//
-//
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            String action = intent.getAction();
-//            if (action.equals(LocationManager.PROVIDERS_CHANGED_ACTION)) {
-//                currentGPSState = getGPSState(context);
-//                if(currentGPSState){
-//                    //TODO 监听到打开GPS的逻辑
-//                }
-//            }
-//        }
-//
-//        /**
-//         * 获取ＧＰＳ当前状态
-//         *
-//         * @param context
-//         * @return
-//         */
-//        private boolean getGPSState(Context context) {
-//            LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-//            boolean on = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-//            return on;
-//        }
-//
-//
-//
-//    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        // Forward results to EasyPermissions
+        //将结果传入EasyPermissions中
+        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
+    }
+
+    /**
+     * 请求权限成功
+     *
+     * @param requestCode
+     * @param perms
+     */
+    @Override
+    public void onPermissionsGranted(int requestCode, List<String> perms) {
+        mapCarFrg.requestLocationData(false);
+    }
+
+    /**
+     * 请求权限失败
+     *
+     * @param requestCode
+     * @param perms
+     */
+    @Override
+    public void onPermissionsDenied(int requestCode, List<String> perms) {
+        /**
+         * 若是在权限弹窗中，用户勾选了'NEVER ASK AGAIN.'或者'不在提示'，且拒绝权限。
+         * 这时候，需要跳转到设置界面去，让用户手动开启。
+         */
+        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
+            new AppSettingsDialog.Builder(this)
+                    .setRationale("没有该权限，此应用程序可能无法正常工作。打开应用设置屏幕以修改应用权限")
+                    .setTitle("必需权限")
+                    .build()
+                    .show();
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            //当从软件设置界面，返回当前程序时候重新检查权限
+            case AppSettingsDialog.DEFAULT_SETTINGS_REQ_CODE:
+                checkAndRequestPermissions();
+                break;
+        }
+    }
+
+    String[] perms = {Manifest.permission.ACCESS_FINE_LOCATION};
+
+    private boolean hasPermissions() {
+
+        return EasyPermissions.hasPermissions(this, perms);
+    }
+
+    /**
+     * 检查百度地图所需的权限
+     */
+    public void checkAndRequestPermissions() {
+        if (hasPermissions()) {
+            if (!isOPen(this)) {
+                currentGPSState = false;
+                //TODO 未打开GPS的业务处理逻辑
+                Toast.makeText(this, "请打开GPS", Toast.LENGTH_LONG).show();
+            } else {
+                currentGPSState = true;
+            }
+        } else {
+            // Ask for one permission
+            EasyPermissions.requestPermissions(
+                    this,
+                    "申请权限   ",
+                    0,
+                    perms);
+        }
+    }
+
+    /**
+     * 判断GPS是否开启，GPS或者AGPS开启一个就认为是开启的
+     *
+     * @param context
+     * @return true 表示开启
+     */
+    public static final boolean isOPen(final Context context) {
+        LocationManager locationManager
+                = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        // 通过GPS卫星定位，定位级别可以精确到街（通过24颗卫星定位，在室外和空旷的地方定位准确、速度快）
+        boolean gps = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        // 通过WLAN或移动网络(3G/2G)确定的位置（也称作AGPS，辅助GPS定位。主要用于在室内或遮盖物（建筑群或茂密的深林等）密集的地方定位）
+        boolean network = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        if (gps || network) {
+            return true;
+        }
+
+        return false;
+    }
+
+    boolean currentGPSState = false;
+
+    GpsStatusReceiver gpsStatusReceiver;
+
+    /**
+     * 注册监听广播
+     */
+    public void registGpsListenter() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(LocationManager.PROVIDERS_CHANGED_ACTION);
+        this.registerReceiver(gpsStatusReceiver, filter);
+    }
+
+    /**
+     * 移除监听广播
+     */
+    public void unregistGpsListenter() {
+        this.unregisterReceiver(gpsStatusReceiver);
+        gpsStatusReceiver = null;
+    }
+
+
+    /**
+     * 监听GPS 状态变化广播
+     */
+    public class GpsStatusReceiver extends BroadcastReceiver {
+
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals(LocationManager.PROVIDERS_CHANGED_ACTION)) {
+                currentGPSState = getGPSState(context);
+                if (currentGPSState) {
+                    //TODO 监听到打开GPS的逻辑
+                }
+            }
+        }
+
+        /**
+         * 获取ＧＰＳ当前状态
+         *
+         * @param context
+         * @return
+         */
+        private boolean getGPSState(Context context) {
+            LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+            boolean on = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+            return on;
+        }
+
+
+    }
 
 }

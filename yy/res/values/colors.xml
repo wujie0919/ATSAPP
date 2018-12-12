@@ -81,7 +81,7 @@
     <!-- Android standard ICS color -->
     <color name="viewfinder_mask">#60000000</color>
 
-    <color name="color_pressed">#9c000000</color>c
+    <color name="color_pressed">#9c000000</color>
     <color name="ripple_color">#ffeeeeee</color>
     <color name="c575a5c">#575a5c</color>
     <!--浅颜色字体-->
